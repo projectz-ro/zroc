@@ -1,0 +1,17 @@
+#ifndef ZROC_STACK
+#define ZROC_STACK
+#include <stdlib.h>
+
+typedef struct {
+  void *data;
+  size_t size;
+  size_t capacity;
+  size_t element_size;
+} Zroc_Stack;
+
+int new_stack(size_t unit_size, size_t init_capacity, Zroc_Stack *out);
+int stack_push(Zroc_Stack *stack, void *element);
+int stack_pop(Zroc_Stack *stack, void *out);
+void stack_free(Zroc_Stack *stack);
+
+#endif
