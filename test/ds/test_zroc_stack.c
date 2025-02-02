@@ -1,4 +1,7 @@
 #include "../../include/ds/zroc_stack.h"
+#include "../../src/ds/zroc_dynArray.c"
+#include "../../src/ds/zroc_stack.c"
+#include "../zroc_testing.c"
 #include "../zroc_testing.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -55,14 +58,14 @@ void test_stack_operations(TestContext *tc) {
   if (tc->failures > 0) {
     printf("\n%d/%d tests failed!\n", tc->failures, tc->count);
   } else {
-    printf("\nAll tests passed!\n");
+    printf("\nZroc Stack: All tests passed!\n");
   }
 }
 
 int main() {
   TestContext tc = create_context();
-  suppress_stderr(&tc);
+  /* suppress_stderr(&tc); */
   test_stack_operations(&tc);
-  restore_stderr(&tc);
+  /* restore_stderr(&tc); */
   return 0;
 }

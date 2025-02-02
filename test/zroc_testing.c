@@ -12,7 +12,7 @@ int test(TestContext *tc, const char *test_name, int passed) {
 }
 
 TestContext create_context() {
-  FILE *file;
+  FILE *file = NULL;
   TestContext t = {0, 0, file};
   return t;
 }
