@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int new_stack(size_t element_size, size_t init_capacity, Zroc_Stack *out) {
+int stack_new(size_t element_size, size_t init_capacity, Zroc_Stack *out) {
   if (!out) {
     fputs("Error: Null \"out\".\n", stderr);
     return -1;
@@ -17,7 +17,7 @@ int new_stack(size_t element_size, size_t init_capacity, Zroc_Stack *out) {
     return -1;
   }
 
-  int error = new_dynArray(element_size, init_capacity, out->data);
+  int error = dynArray_new(element_size, init_capacity, out->data);
   if (error) {
     fputs("Error: Failed to initialize stack using dynamic array.\n", stderr);
     return -1;

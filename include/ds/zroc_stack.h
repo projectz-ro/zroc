@@ -10,7 +10,7 @@ typedef struct {
   size_t element_size;
 } Zroc_Stack;
 
-int new_stack(size_t element_size, size_t init_capacity, Zroc_Stack *out);
+int stack_new(size_t element_size, size_t init_capacity, Zroc_Stack *out);
 int stack_push(Zroc_Stack *stack, void *element);
 int stack_pop(Zroc_Stack *stack, void *out);
 void stack_free(Zroc_Stack *stack);

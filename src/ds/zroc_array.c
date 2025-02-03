@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int new_array(size_t element_size, size_t capacity, Zroc_Array *out) {
+int array_new(size_t element_size, size_t capacity, Zroc_Array *out) {
   if (!out) {
     fputs("Error: Null \"out\".\n", stderr);
     return -1;

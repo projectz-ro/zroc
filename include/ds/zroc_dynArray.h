@@ -9,7 +9,7 @@ typedef struct {
   size_t element_size;
 } Zroc_DynArray;
 
-int new_dynArray(size_t element_size, size_t capacity, Zroc_DynArray *out);
+int dynArray_new(size_t element_size, size_t capacity, Zroc_DynArray *out);
 int dynArray_expand(Zroc_DynArray *arr);
 int dynArray_get(Zroc_DynArray *arr, int index, void *out);
 int dynArray_set(Zroc_DynArray *arr, int index, void *value);

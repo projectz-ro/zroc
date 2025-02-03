@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int new_dynArray(size_t element_size, size_t capacity, Zroc_DynArray *out) {
+int dynArray_new(size_t element_size, size_t capacity, Zroc_DynArray *out) {
   if (!out) {
     fputs("Error: Null \"out\" pointer passed to new_dynArray.\n", stderr);
     return -1;
