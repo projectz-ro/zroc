@@ -1,6 +1,4 @@
 #include "../../include/ds/zroc_stack.h"
-#include "../../src/ds/zroc_dynArray.c"
-#include "../../src/ds/zroc_stack.c"
 #include "../zroc_testing.c"
 #include "../zroc_testing.h"
 #include <stdio.h>
@@ -12,15 +10,13 @@ void test_stack_operations(TestContext *tc) {
 
   // Stack initialization
   test(tc, "Stack initialization",
-       new_stack(sizeof(int), init_capacity, &stack) == 0);
-
+       stack_new(sizeof(int), init_capacity, &stack) == 0);
   test(tc, "Stack initial capacity", stack.capacity == init_capacity);
   test(tc, "Stack initial size", stack.size == 0);
 
   // Pushing elements
   int values[] = {10, 20, 30, 40, 50};
   for (int i = 0; i < 5; i++) {
-
     test(tc, "Pushing element", stack_push(&stack, &values[i]) == 0);
   }
   test(tc, "Stack size after pushes",
@@ -30,28 +26,21 @@ void test_stack_operations(TestContext *tc) {
   int popped;
   test(tc, "Popping element", stack_pop(&stack, &popped) == 0 && popped == 50);
   test(tc, "Stack size after pop", stack.size == 4);
-
   test(tc, "Popping another element",
        stack_pop(&stack, &popped) == 0 && popped == 40);
   test(tc, "Stack size after second pop", stack.size == 3);
 
   // Popping until empty
-
   test(tc, "Popping from non-empty stack", stack_pop(&stack, &popped) == 0);
-
   test(tc, "Popping from non-empty stack", stack_pop(&stack, &popped) == 0);
-
   test(tc, "Popping from non-empty stack", stack_pop(&stack, &popped) == 0);
-
   test(tc, "Stack size after popping all elements", stack.size == 0);
 
   // Popping from empty stack
-
   test(tc, "Popping from empty stack", stack_pop(&stack, &popped) != 0);
 
   // Free stack
   stack_free(&stack);
-
   test(tc, "Stack free",
        stack.data == NULL && stack.capacity == 0 && stack.size == 0);
 

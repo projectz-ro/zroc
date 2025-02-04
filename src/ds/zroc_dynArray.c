@@ -30,7 +30,7 @@ int dynArray_get(Zroc_DynArray *arr, int index, void *out) {
     fputs("Error: Null \"out\" pointer passed to dynArray_get.\n", stderr);
     return -1;
   }
-  if (index < 0 || index >= arr->size) {
+  if (index < 0 || index >= (int)arr->size) {
     fprintf(stderr, "Error: Index %d out of bounds for dynArray_get.\n", index);
     return -1;
   }

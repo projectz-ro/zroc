@@ -1,7 +1,8 @@
 #include "../../include/ds/zroc_dynArray.h"
-#include "../../src/ds/zroc_dynArray.c"
 #include "../zroc_testing.c"
 #include "../zroc_testing.h"
+#include <limits.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,7 +12,7 @@ void test_dynArray_operations(TestContext *tc) {
 
   // Dynamic Array initialization
   test(tc, "Dynamic Array initialization",
-       new_dynArray(sizeof(int), init_capacity, &dynArray) == 0);
+       dynArray_new(sizeof(int), init_capacity, &dynArray) == 0);
   test(tc, "Dynamic Array initial capacity",
        dynArray.capacity == init_capacity);
   test(tc, "Dynamic Array initial size", dynArray.size == 0);
@@ -45,7 +46,7 @@ void test_dynArray_operations(TestContext *tc) {
 
   // Check setting element at an out-of-bounds index
   test(tc, "Capacity exceeds SIZE_MAX set",
-       dynArray_set(&dynArray, SIZE_MAX, &new_value) != 0);
+       dynArray_set(&dynArray, INT_MAX, &new_value) != 0);
 
   // Free dynamic array
   dynArray_free(&dynArray);

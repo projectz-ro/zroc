@@ -1,5 +1,4 @@
 #include "../../include/ds/zroc_array.h"
-#include "../../src/ds/zroc_array.c"
 #include "../zroc_testing.c"
 #include "../zroc_testing.h"
 #include <stdio.h>
@@ -11,7 +10,7 @@ void test_array_operations(TestContext *tc) {
 
   // Array initialization
   test(tc, "Array initialization",
-       new_array(sizeof(int), init_capacity, &array) == 0);
+       array_new(sizeof(int), init_capacity, &array) == 0);
   test(tc, "Array initial capacity", array.capacity == init_capacity);
   test(tc, "Array initial size", array.size == 0);
 

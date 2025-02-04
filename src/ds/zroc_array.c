@@ -28,14 +28,13 @@ int array_get(Zroc_Array *arr, int index, void *out) {
     fputs("Error: Null \"out\".\n", stderr);
     return -1;
   }
-  if (index >= arr->size || index < 0) {
+  if (index >= (int)arr->size || index < 0) {
     fprintf(stderr,
             "Error: Index out of bounds for array_get. Index: %d, Size: %zu\n",
             index, arr->size);
     return -1;
   }
-  memcpy(out, (char *)(arr->data + arr->element_size * index),
-         arr->element_size);
+  memcpy(out, (char *)arr->data + arr->element_size * index, arr->element_size);
 
   return 0;
 }
@@ -45,14 +44,14 @@ int array_set(Zroc_Array *arr, int index, void *value) {
     fputs("Error: Null \"value\".\n", stderr);
     return -1;
   }
-  if (index >= arr->capacity || index < 0) {
+  if (index >= (int)arr->capacity || index < 0) {
     fprintf(
         stderr,
         "Error: Index out of bounds for array_set. Index: %d, capacity: %zu\n",
         index, arr->capacity);
     return -1;
   }
-  void *dest = (char *)(arr->data + arr->element_size * index);
+  void *dest = (char *)arr->data + arr->element_size * index;
   memcpy(dest, value, arr->element_size);
   arr->size++;
 

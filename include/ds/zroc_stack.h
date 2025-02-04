@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 typedef struct {
-  Zroc_DynArray *data;
+  void *data;
   size_t size;
   size_t capacity;
   size_t element_size;
