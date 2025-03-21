@@ -1,4 +1,4 @@
-#include "../../include/ds/zroc_stack.h"
+#include "include/ds/zroc_stack.h"
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>

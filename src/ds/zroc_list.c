@@ -1,7 +1,7 @@
+#include "include/ds/zroc_list.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../../include/ds/zroc_list.h"
 
 int list_create_node(size_t element_size, struct List_Node **out) {
   if (!out) {
@@ -18,7 +18,7 @@ int list_create_node(size_t element_size, struct List_Node **out) {
   (*out)->data = malloc(element_size);
   if (!(*out)->data) {
     fputs("Error: Memory allocation failed for node data.\n", stderr);
-    free(*out); 
+    free(*out);
     return -1;
   }
 
@@ -39,7 +39,9 @@ int list_get(Zroc_List *list, int index, void *out) {
     return -1;
   }
   if ((int)list->size <= index || index < 0) {
-    fprintf(stderr, "Error: Index out of bounds for list_get. Index: %d, Size: %zu\n", index, list->size);
+    fprintf(stderr,
+            "Error: Index out of bounds for list_get. Index: %d, Size: %zu\n",
+            index, list->size);
     return -1;
   }
 
@@ -55,13 +57,15 @@ int list_get(Zroc_List *list, int index, void *out) {
 int list_add(Zroc_List *list, int index, void *value) {
   struct List_Node *newNode;
   if (list_create_node(list->element_size, &newNode) != 0) {
-    return -1; 
+    return -1;
   }
 
   memcpy(newNode->data, value, list->element_size);
 
   if (index < 0 || index > (int)list->size) {
-    fprintf(stderr, "Error: Index out of bounds for list_add. Index: %d, Size: %zu\n", index, list->size);
+    fprintf(stderr,
+            "Error: Index out of bounds for list_add. Index: %d, Size: %zu\n",
+            index, list->size);
     free(newNode->data);
     free(newNode);
     return -1;
@@ -74,20 +78,18 @@ int list_add(Zroc_List *list, int index, void *value) {
     }
     list->head = newNode;
     if (list->size == 0) {
-      list->tail = newNode;  
+      list->tail = newNode;
     }
-  } 
-  else if (index == list->size) {
+  } else if (index == list->size) {
     if (list->tail) {
       list->tail->next = newNode;
       newNode->previous = list->tail;
     }
     list->tail = newNode;
     if (list->size == 0) {
-      list->head = newNode;  
+      list->head = newNode;
     }
-  } 
-  else {
+  } else {
     struct List_Node *node = list->head;
     for (int i = 0; i < index - 1; i++) {
       node = node->next;
@@ -106,7 +108,10 @@ int list_add(Zroc_List *list, int index, void *value) {
 
 int list_remove(Zroc_List *list, int index, void *out) {
   if (index < 0 || index >= (int)list->size) {
-    fprintf(stderr, "Error: Index out of bounds for list_remove. Index: %d, Size: %zu\n", index, list->size);
+    fprintf(
+        stderr,
+        "Error: Index out of bounds for list_remove. Index: %d, Size: %zu\n",
+        index, list->size);
     return -1;
   }
 
@@ -167,4 +172,3 @@ void list_free(Zroc_List *list) {
   list->tail = NULL;
   list->size = 0;
 }
-

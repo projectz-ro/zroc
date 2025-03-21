@@ -1,5 +1,5 @@
-#ifndef ZROC_ARRAY_H
-#define ZROC_ARRAY_H
+#ifndef ZROC_ARRAY
+#define ZROC_ARRAY
 #include <stdio.h>
 
 typedef struct {
@@ -9,9 +9,9 @@ typedef struct {
   size_t element_size;
 } Zroc_Array;
 
-int array_new(size_t element_size, size_t capacity, Zroc_Array *out);
-int array_get(Zroc_Array *arr, int index, void *out);
-int array_set(Zroc_Array *arr, int index, void *value);
+Zroc_Array *array_new(size_t element_size, size_t capacity);
+void array_set(Zroc_Array *arr, int index, void *value);
+void *array_get(Zroc_Array *arr, int index);
 void array_free(Zroc_Array *arr);
 
 #endif

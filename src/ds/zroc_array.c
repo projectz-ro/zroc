@@ -1,71 +1,77 @@
-#include "../../include/ds/zroc_array.h"
+#include "include/ds/zroc_array.h"
+#include <errno.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int array_new(size_t element_size, size_t capacity, Zroc_Array *out) {
-  if (!out) {
-    fputs("Error: Null \"out\".\n", stderr);
-    return -1;
+Zroc_Array *array_new(size_t element_size, size_t capacity) {
+  errno = 0;
+  if (element_size == 0 || capacity == 0) {
+    errno = EINVAL;
+    return NULL;
   }
-  out->data = malloc(element_size * capacity);
-  if (out->data == NULL) {
-    fputs("Error: Memory allocation for new_array failed.\n", stderr);
-    return -1;
+  if (element_size * capacity > SIZE_MAX) {
+    errno = EOVERFLOW;
+    return NULL;
   }
-
-  out->size = 0;
-  out->capacity = capacity;
-  out->element_size = element_size;
-
-  memset(out->data, 0, element_size * capacity);
-
-  return 0;
+  Zroc_Array *new_array = (Zroc_Array *)malloc(sizeof(Zroc_Array));
+  if (new_array == NULL) {
+    errno = ENOMEM;
+    return NULL;
+  }
+  new_array->data = malloc(element_size * capacity);
+  if (new_array->data == NULL) {
+    errno = ENOMEM;
+    free(new_array);
+    return NULL;
+  }
+  new_array->size = 0;
+  new_array->capacity = capacity;
+  new_array->element_size = element_size;
+  return new_array;
 }
 
-int array_get(Zroc_Array *arr, int index, void *out) {
-  if (!out) {
-    fputs("Error: Null \"out\".\n", stderr);
-    return -1;
+void *array_get(Zroc_Array *arr, int index) {
+  errno = 0;
+  if (arr == NULL) {
+    errno = EINVAL;
+    return NULL;
   }
   if (index >= (int)arr->size || index < 0) {
-    fprintf(stderr,
-            "Error: Index out of bounds for array_get. Index: %d, Size: %zu\n",
-            index, arr->size);
-    return -1;
+    errno = ERANGE;
+    return NULL;
   }
-  memcpy(out, (char *)arr->data + arr->element_size * index, arr->element_size);
-
-  return 0;
+  return (char *)arr->data + arr->element_size * index;
 }
 
-int array_set(Zroc_Array *arr, int index, void *value) {
-  if (!value) {
-    fputs("Error: Null \"value\".\n", stderr);
-    return -1;
+void array_set(Zroc_Array *arr, int index, void *value) {
+  errno = 0;
+  if (arr == NULL || value == NULL) {
+    errno = EINVAL;
+    return;
   }
   if (index >= (int)arr->capacity || index < 0) {
-    fprintf(
-        stderr,
-        "Error: Index out of bounds for array_set. Index: %d, capacity: %zu\n",
-        index, arr->capacity);
-    return -1;
+    errno = ERANGE;
+    return;
   }
   void *dest = (char *)arr->data + arr->element_size * index;
   memcpy(dest, value, arr->element_size);
-  arr->size++;
-
-  return 0;
+  if (index >= (int)arr->size) {
+    arr->size = index + 1;
+  }
 }
 
 void array_free(Zroc_Array *arr) {
-  if (!arr || !arr->data) {
-    fputs("Error: Null pointer encountered in array_free.\n", stderr);
+  if (arr == NULL) {
     return;
   }
-  free(arr->data);
+  if (arr->data != NULL) {
+    free(arr->data);
+    arr->data = NULL;
+  }
   arr->element_size = 0;
   arr->size = 0;
   arr->capacity = 0;
-  arr->data = NULL;
+  free(arr);
 }

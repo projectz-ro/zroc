@@ -1,5 +1,5 @@
-#ifndef ZROC_DYNARRAY_H
-#define ZROC_DYNARRAY_H
+#ifndef ZROC_DYNARRAY
+#define ZROC_DYNARRAY
 #include <stdio.h>
 
 typedef struct {
@@ -9,10 +9,10 @@ typedef struct {
   size_t element_size;
 } Zroc_DynArray;
 
-int dynArray_new(size_t element_size, size_t capacity, Zroc_DynArray *out);
-int dynArray_expand(Zroc_DynArray *arr);
-int dynArray_get(Zroc_DynArray *arr, int index, void *out);
-int dynArray_set(Zroc_DynArray *arr, int index, void *value);
+Zroc_DynArray *dynArray_new(size_t element_size, size_t capacity);
+void dynArray_expand(Zroc_DynArray *arr);
+void *dynArray_get(Zroc_DynArray *arr, int index);
+void dynArray_set(Zroc_DynArray *arr, int index, void *value);
 void dynArray_free(Zroc_DynArray *arr);
 
 #endif

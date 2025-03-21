@@ -1,6 +1,5 @@
 #ifndef ZROC_STACK
 #define ZROC_STACK
-#include "zroc_dynArray.h"
 #include <stdio.h>
 
 typedef struct {

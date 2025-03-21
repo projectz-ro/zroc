@@ -1,4 +1,3 @@
-
 CC = gcc
 CFLAGS = -std=c23 -Wall -Wextra -pedantic -g
 SRC_DIR = src/ds
