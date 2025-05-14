@@ -5,5 +5,6 @@
 #include "ds/zroc_list.h"
 #include "ds/zroc_sparse_set.h"
 #include "ds/zroc_stack.h"
+#include "ds/zroc_tree.h"
 
 #endif
