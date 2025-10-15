@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structZrocErr" xml:lang="en-US">
+<title>ZrocErr Struct Reference</title>
+<indexterm><primary>ZrocErr</primary></indexterm>
+<para>
+
+<para>Thread-local error struct. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;zroc_error.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f">ZrocErrCode</link> <link linkend="_structZrocErr_1a73fd92c7b52c1442156c2028ec4a8ed7">code</link></para>
+</listitem>
+            <listitem><para>char * <link linkend="_structZrocErr_1a0b2e8c7f76df48129f994ecc46d5c66c">message</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Thread-local error struct. </para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structZrocErr_1a73fd92c7b52c1442156c2028ec4a8ed7"/><section>
+    <title>code</title>
+<indexterm><primary>code</primary><secondary>ZrocErr</secondary></indexterm>
+<indexterm><primary>ZrocErr</primary><secondary>code</secondary></indexterm>
+<para><computeroutput><link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f">ZrocErrCode</link> code</computeroutput></para>
+<para>The error code. </para>
+</section>
+<anchor xml:id="_structZrocErr_1a0b2e8c7f76df48129f994ecc46d5c66c"/><section>
+    <title>message</title>
+<indexterm><primary>message</primary><secondary>ZrocErr</secondary></indexterm>
+<indexterm><primary>ZrocErr</primary><secondary>message</secondary></indexterm>
+<para><computeroutput>char* message</computeroutput></para>
+<para>Error message string. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+include/zroc/error/<link linkend="_zroc__error_8h">zroc_error.h</link></section>
+</section>

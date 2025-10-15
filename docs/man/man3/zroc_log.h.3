@@ -1,0 +1,149 @@
+.TH "include/zroc/log/zroc_log.h" 3 "Version 0.01" "ZroC" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/zroc/log/zroc_log.h \- Logging utilities for ZroC\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdio\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBZrocLogger\fP"
+.br
+.RI "Represents a logger object\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBZrocLogLevel\fP \fBZrocLogLevel\fP"
+.br
+.ti -1c
+.RI "typedef struct ZrocLogger \fBZrocLogger\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBZrocLogLevel\fP { \fBZROC_LOG_DEBUG\fP, \fBZROC_LOG_INFO\fP, \fBZROC_LOG_WARN\fP, \fBZROC_LOG_ERROR\fP }"
+.br
+.RI "Log levels supported by ZroC\&. "
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBZrocLogger\fP * \fBzroc_logger_create\fP (FILE *output, int level, const char *prefix)"
+.br
+.RI "Create a new logger\&. "
+.ti -1c
+.RI "void \fBzroc_logger_free\fP (\fBZrocLogger\fP *logger)"
+.br
+.RI "Free a logger\&. "
+.ti -1c
+.RI "void \fBzroc_log\fP (\fBZrocLogger\fP *logger, \fBZrocLogLevel\fP lvl, const char *fmt,\&.\&.\&.)"
+.br
+.RI "Log a formatted message\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Logging utilities for ZroC\&. 
+
+Provides a simple logging API with log levels and optional prefixes\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct ZrocLogger ZrocLogger"
+
+.SS "typedef enum \fBZrocLogLevel\fP \fBZrocLogLevel\fP"
+
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBZrocLogLevel\fP"
+
+.PP
+Log levels supported by ZroC\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BIZROC_LOG_DEBUG \fP
+Debug-level messages\&. 
+.TP
+\f(BIZROC_LOG_INFO \fP
+Informational messages\&. 
+.TP
+\f(BIZROC_LOG_WARN \fP
+Warning messages\&. 
+.TP
+\f(BIZROC_LOG_ERROR \fP
+Error messages\&. 
+.SH "Function Documentation"
+.PP 
+.SS "void zroc_log (\fBZrocLogger\fP * logger, \fBZrocLogLevel\fP lvl, const char * fmt,  \&.\&.\&.)"
+
+.PP
+Log a formatted message\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogger\fP Pointer to the logger to use\&. 
+.br
+\fIlvl\fP Log level of this message\&. 
+.br
+\fIfmt\fP Format string (printf-style)\&. 
+.br
+\fI\&.\&.\&.\fP Format arguments\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Messages with a level lower than the logger's \fRlevel\fP will be ignored\&. 
+.RE
+.PP
+
+.SS "\fBZrocLogger\fP * zroc_logger_create (FILE * output, int level, const char * prefix)"
+
+.PP
+Create a new logger\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIoutput\fP The output stream (e\&.g\&., stderr or a file pointer)\&. 
+.br
+\fIlevel\fP Minimum log level to output\&. 
+.br
+\fIprefix\fP Optional prefix to prepend to every message (can be NULL)\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to a newly allocated \fBZrocLogger\fP, or NULL on failure\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+The returned logger must be freed with \fBzroc_logger_free()\fP\&. 
+.RE
+.PP
+
+.SS "void zroc_logger_free (\fBZrocLogger\fP * logger)"
+
+.PP
+Free a logger\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlogger\fP Pointer to the logger to free\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZroC from the source code\&.

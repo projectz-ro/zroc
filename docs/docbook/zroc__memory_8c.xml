@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_zroc__memory_8c" xml:lang="en-US">
+<title>src/memory/zroc_memory.c File Reference</title>
+<indexterm><primary>src/memory/zroc_memory.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;zroc/memory/zroc_memory.h&quot;<?linebreak?>#include &quot;zroc/error/zroc_error.h&quot;<?linebreak?>#include &lt;stdint.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &lt;zroc/log/zroc_log.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void * <link linkend="_zroc__memory_8c_1a6f64cfc4516e7cb03b81bfe72632bbc1">zroc_malloc</link> (size_t size)</para>
+
+<para>Allocate memory safely. </para>
+</listitem>
+            <listitem><para>void * <link linkend="_zroc__memory_8c_1a6beb2342c311e02fa38e25e8cb961f59">zroc_calloc</link> (size_t count, size_t size)</para>
+
+<para>Allocate zero-initialized memory safely. </para>
+</listitem>
+            <listitem><para>void * <link linkend="_zroc__memory_8c_1a4dfef53c9ac5006af906712f008f2298">zroc_realloc</link> (void *ptr, size_t size)</para>
+
+<para>Resize previously allocated memory. </para>
+</listitem>
+            <listitem><para>void <link linkend="_zroc__memory_8c_1a60da66b7fc5a35e050af787d37fc97b3">zroc_free</link> (void *ptr)</para>
+
+<para>Free memory safely. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_zroc__memory_8c_1a6beb2342c311e02fa38e25e8cb961f59"/><section>
+    <title>zroc_calloc()</title>
+<indexterm><primary>zroc_calloc</primary><secondary>zroc_memory.c</secondary></indexterm>
+<indexterm><primary>zroc_memory.c</primary><secondary>zroc_calloc</secondary></indexterm>
+<para><computeroutput>void * zroc_calloc (size_t count, size_t size)</computeroutput></para><para>
+
+<para>Allocate zero-initialized memory safely. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>count</entry><entry>
+<para>Number of elements. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>Size of each element. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to allocated memory, or NULL on failure.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Logs an error if allocation fails or if total size is invalid. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_zroc__memory_8c_1a60da66b7fc5a35e050af787d37fc97b3"/><section>
+    <title>zroc_free()</title>
+<indexterm><primary>zroc_free</primary><secondary>zroc_memory.c</secondary></indexterm>
+<indexterm><primary>zroc_memory.c</primary><secondary>zroc_free</secondary></indexterm>
+<para><computeroutput>void zroc_free (void * ptr)</computeroutput></para><para>
+
+<para>Free memory safely. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ptr</entry><entry>
+<para>Pointer to memory to free. Can be NULL. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_zroc__memory_8c_1a6f64cfc4516e7cb03b81bfe72632bbc1"/><section>
+    <title>zroc_malloc()</title>
+<indexterm><primary>zroc_malloc</primary><secondary>zroc_memory.c</secondary></indexterm>
+<indexterm><primary>zroc_memory.c</primary><secondary>zroc_malloc</secondary></indexterm>
+<para><computeroutput>void * zroc_malloc (size_t size)</computeroutput></para><para>
+
+<para>Allocate memory safely. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>size</entry><entry>
+<para>Number of bytes to allocate. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to allocated memory, or NULL on failure.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Logs an error if allocation fails or if size is invalid. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_zroc__memory_8c_1a4dfef53c9ac5006af906712f008f2298"/><section>
+    <title>zroc_realloc()</title>
+<indexterm><primary>zroc_realloc</primary><secondary>zroc_memory.c</secondary></indexterm>
+<indexterm><primary>zroc_memory.c</primary><secondary>zroc_realloc</secondary></indexterm>
+<para><computeroutput>void * zroc_realloc (void * ptr, size_t size)</computeroutput></para><para>
+
+<para>Resize previously allocated memory. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ptr</entry><entry>
+<para>Pointer to previously allocated memory. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>size</entry><entry>
+<para>New size in bytes. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to resized memory, or NULL on failure.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>Original memory is not freed if realloc fails. </para>
+
+<para>Logs an error if allocation fails or if size is invalid. </para>
+</note>
+</para>
+</section>
+</section>
+</section>

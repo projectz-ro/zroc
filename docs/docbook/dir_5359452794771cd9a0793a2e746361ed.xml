@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_5359452794771cd9a0793a2e746361ed" xml:lang="en-US">
+<title>include/zroc Directory Reference</title>
+<indexterm><primary>include/zroc Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_196bada0f2aacef65af860dadf14f238">bits</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_70feb687ec7d86273f84dd943972cbcc">error</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_ecbd93957393734f479c855a032a94b1">log</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_1cf3b639bdab0853580008de6ba8ea74">memory</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_base__types_8h">base_types.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_zroc_8h">zroc.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

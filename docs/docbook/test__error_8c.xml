@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_test__error_8c" xml:lang="en-US">
+<title>tests/test_error.c File Reference</title>
+<indexterm><primary>tests/test_error.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;criterion/criterion.h&gt;<?linebreak?>#include &lt;zroc/zroc.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_test__error_8c_1ada1be933463107026f52ac9e21ebae84">Test</link> (error, err_str_returns_string)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_test__error_8c_1ada1be933463107026f52ac9e21ebae84"/><section>
+    <title>Test()</title>
+<indexterm><primary>Test</primary><secondary>test_error.c</secondary></indexterm>
+<indexterm><primary>test_error.c</primary><secondary>Test</secondary></indexterm>
+<para><computeroutput>Test (error , err_str_returns_string )</computeroutput></para></section>
+</section>
+</section>

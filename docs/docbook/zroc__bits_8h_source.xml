@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_zroc__bits_8h_source" xml:lang="en-US">
+<title>zroc_bits.h</title>
+<indexterm><primary>include/zroc/bits/zroc_bits.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_base__types_8h">zroc/base_types.h</link>&quot;</emphasis>
+4 
+5 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;bit(<link linkend="_base__types_8h_1a92c50087ca0e64fa93fc59402c55f8ca">u8</link>&#32;n)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;((<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>)1)&#32;&lt;&lt;&#32;n;&#32;};
+6 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;set_bit(<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;*v,&#32;<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;b)&#32;{&#32;*v&#32;|=&#32;b;&#32;};
+7 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;clear_bit(<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;*v,&#32;<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;b)&#32;{&#32;*v&#32;&amp;=&#32;~b;&#32;};
+8 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;toggle_bit(<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;*v,&#32;<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;b)&#32;{&#32;*v&#32;^=&#32;b;&#32;};
+9 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">boolean</emphasis>&#32;check_bit(<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;v,&#32;<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;b)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;(v&#32;&amp;&#32;b)&#32;!=&#32;0;&#32;};
+</programlisting></section>

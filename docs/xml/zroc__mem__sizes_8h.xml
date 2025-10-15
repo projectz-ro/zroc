@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="zroc__mem__sizes_8h" kind="file" language="C++">
+    <compoundname>zroc_mem_sizes.h</compoundname>
+    <includes refid="base__types_8h" local="yes">zroc/base_types.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>zroc/base_types.h</label>
+        <link refid="base__types_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/zroc/memory/zroc_mem_sizes.h</label>
+        <link refid="zroc__mem__sizes_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="zroc__mem__sizes_8h_1a193ab1a8d6d5821d77a3b2d765fea9ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref></type>
+        <definition>static usize KiB</definition>
+        <argsstring>(usize x)</argsstring>
+        <name>KiB</name>
+        <param>
+          <type><ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/memory/zroc_mem_sizes.h" line="4" column="21" bodyfile="include/zroc/memory/zroc_mem_sizes.h" bodystart="4" bodyend="4"/>
+      </memberdef>
+      <memberdef kind="function" id="zroc__mem__sizes_8h_1a72e5a283d106bdbbca1ae06c2e34836f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref></type>
+        <definition>static usize MiB</definition>
+        <argsstring>(usize x)</argsstring>
+        <name>MiB</name>
+        <param>
+          <type><ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/memory/zroc_mem_sizes.h" line="5" column="21" bodyfile="include/zroc/memory/zroc_mem_sizes.h" bodystart="5" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="zroc__mem__sizes_8h_1a9e0a0b416d9dd556f4eb4711b7488e03" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref></type>
+        <definition>static usize GiB</definition>
+        <argsstring>(usize x)</argsstring>
+        <name>GiB</name>
+        <param>
+          <type><ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/memory/zroc_mem_sizes.h" line="9" column="21" bodyfile="include/zroc/memory/zroc_mem_sizes.h" bodystart="9" bodyend="13"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="base__types_8h" kindref="compound">zroc/base_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref><sp/>KiB(<ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref><sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>*<sp/>1024ULL;<sp/>}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref><sp/>MiB(<ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref><sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>&lt;=<sp/>(SIZE_MAX<sp/>/<sp/>(1024ULL<sp/>*<sp/>1024ULL)))<sp/>?<sp/>x<sp/>*<sp/>1024ULL<sp/>*<sp/>1024ULL</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref><sp/>GiB(<ref refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kindref="member">usize</ref><sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>&lt;=<sp/>(SIZE_MAX<sp/>/<sp/>(1024ULL<sp/>*<sp/>1024ULL<sp/>*<sp/>1024ULL)))</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>?<sp/>x<sp/>*<sp/>1024ULL<sp/>*<sp/>1024ULL<sp/>*<sp/>1024ULL</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="include/zroc/memory/zroc_mem_sizes.h"/>
+  </compounddef>
+</doxygen>

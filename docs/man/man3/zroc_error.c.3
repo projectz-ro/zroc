@@ -1,0 +1,90 @@
+.TH "src/error/zroc_error.c" 3 "Version 0.01" "ZroC" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/error/zroc_error.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'zroc/error/zroc_error\&.h'\fP
+.br
+\fR#include 'zroc/memory/zroc_memory\&.h'\fP
+.br
+\fR#include <pthread\&.h>\fP
+.br
+\fR#include <stdio\&.h>\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+\fR#include <zroc/log/zroc_log\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBZrocErr\fP * \fBzroc_err_get\fP (void)"
+.br
+.RI "Get the thread-local error object\&. "
+.ti -1c
+.RI "void \fBzroc_err_set\fP (\fBZrocErrCode\fP code, const char *msg)"
+.br
+.RI "Set the thread-local error\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBZrocErr\fP \fBZROC_ERRORS\fP []"
+.br
+.RI "Array of default errors with messages for each error code\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "\fBZrocErr\fP * zroc_err_get (void )"
+
+.PP
+Get the thread-local error object\&. If the thread does not have an error object yet, one will be allocated and initialized with code \fRZROC_OK\fP and an empty message\&.
+
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to the thread-local \fBZrocErr\fP object\&. 
+.RE
+.PP
+
+.SS "void zroc_err_set (\fBZrocErrCode\fP code, const char * msg)"
+
+.PP
+Set the thread-local error\&. Updates the thread-local error code and message\&. If \fRmsg\fP is \fRNULL\fP, the default message for the given \fRcode\fP from \fRZROC_ERRORS\fP will be used\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcode\fP The error code to set\&. 
+.br
+\fImsg\fP Optional error message\&. If NULL, the default is used\&. 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "\fBZrocErr\fP ZROC_ERRORS[]"
+\fBInitial value:\fP
+.nf
+= {
+    {\&.code = ZROC_OK, \&.message = ""},
+    {\&.code = ZROC_ERR_INVALID_ARG, \&.message = "Invalid argument"},
+    {\&.code = ZROC_ERR_OUT_OF_MEMORY, \&.message = "Out of memory"},
+    {\&.code = ZROC_ERR_ALLOC_FAILED, \&.message = "Allocation failed"},
+    {\&.code = ZROC_ERR_CUSTOM, \&.message = ""},
+    {\&.code = ZROC_ERR_UNKNOWN, \&.message = "Unknown error"},
+}
+.PP
+.fi
+
+.PP
+Array of default errors with messages for each error code\&. Used as the source for default messages when none is provided\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZroC from the source code\&.

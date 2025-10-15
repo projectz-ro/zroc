@@ -1,0 +1,19 @@
+\doxysection{zroc\+\_\+mem\+\_\+sizes.\+h}
+\hypertarget{zroc__mem__sizes_8h_source}{}\label{zroc__mem__sizes_8h_source}\index{include/zroc/memory/zroc\_mem\_sizes.h@{include/zroc/memory/zroc\_mem\_sizes.h}}
+\mbox{\hyperlink{zroc__mem__sizes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{base__types_8h}{zroc/base\_types.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ KiB(\mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ x)\ \{\ \textcolor{keywordflow}{return}\ x\ *\ 1024ULL;\ \}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ MiB(\mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ x)\ \{}
+\DoxyCodeLine{00006\ \ \ \textcolor{keywordflow}{return}\ (x\ <=\ (SIZE\_MAX\ /\ (1024ULL\ *\ 1024ULL)))\ ?\ x\ *\ 1024ULL\ *\ 1024ULL}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 0;}
+\DoxyCodeLine{00008\ \}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ GiB(\mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ x)\ \{}
+\DoxyCodeLine{00010\ \ \ \textcolor{keywordflow}{return}\ (x\ <=\ (SIZE\_MAX\ /\ (1024ULL\ *\ 1024ULL\ *\ 1024ULL)))}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ x\ *\ 1024ULL\ *\ 1024ULL\ *\ 1024ULL}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ 0;}
+\DoxyCodeLine{00013\ \}}
+
+\end{DoxyCode}

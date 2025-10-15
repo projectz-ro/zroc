@@ -1,37 +1,59 @@
-# zroc
+
+# TODO
+
 ZroC, Collection of useful C libraries
 
-#### **1. Arrays and Linked Lists**
-- **Dynamic Array (malloc-based, custom allocator support)**  
-  - Used for fast indexed access and dynamic resizing.  
-- **Doubly Linked List**  
-  - Supports efficient bidirectional traversal.  
+## Errors
 
-#### **2. Stacks and Queues**
-- **Stack (LIFO, Array-Based)**
-  - Used in recursion, function calls, parsing expressions, and undo operations.  
-- **Queue (Ring Buffer)**
-  - Used in scheduling, event handling, and breadth-first search (BFS).  
+- [x] Error types via enum
+- [x] Error struct
+- [x] Default messages
 
-#### **3. Hash Tables**
-- **Hash Map / Hash Set (Open Addressing, Linear Probing)**  
-  - Used for fast lookups, caching, and deduplication.  
-  - Key for **game engines** (e.g., storing entity-component mappings in ECS).  
+## Logging
 
-#### **4. Trees**
-- **Binary Search Tree (BST)**  
-  - Used for **sorted data**, **searching**, and **hierarchical relationships**.  
-- **Octree / Quadtree**  
-  - Used in **game engines** for **spatial partitioning**, **collision detection**, and **LOD (level-of-detail) management**.  
+- [x] Simple logging with formatting
 
-#### **5. Heaps / Priority Queues**
-- **Binary Heap (Min-Heap / Max-Heap)**  
-  - Used in **priority scheduling**, **Dijkstra’s algorithm**, and **task queues**.  
+## Memory
 
-#### **6. Graphs**
-- **Adjacency List (for Graph Representation & A* Pathfinding)**  
-  - Efficient for **sparse graphs** used in **game AI navigation**.  
+- [x] Simple malloc, calloc, realloc, free wrappers
+- [x] Wrap basics with basic validation and check for success
+- [x] Debug with line and file
 
-#### **7. Specialized Data Structures**
-- **Bit Manipulation & Bitsets**  
-  - Used in **memory optimization**, **flags**, and **network protocols**.  
+## Data Structures
+
+- [ ] Array
+- [ ] Dynamic Array
+- [ ] Stack
+- [ ] Queue
+- [ ] Ring Buffer
+- [ ] Linked List (Doubly)
+- [ ] Hash Map
+- [ ] BST
+- [ ] Quad/Oct Tree
+- [ ] Red/Black Tree
+- [ ] Heap (Min / Max)
+- [ ] Graph
+
+## Algorithms
+
+- [ ] Merge Sort
+- [ ] Quick Sort
+- [ ] Bubble Sort
+
+## Math
+
+- Vectors
+  - [ ] 2D, 3D
+  - [ ] add, sub, mult, div
+  - [ ] dot product
+  - [ ] scaling (multiply by scalar)
+- Matrices
+  - [ ] mat2, mat3, mat4
+  - [ ] invert, determinant, transpose
+  - [ ] add, sub, mult, div
+- Constants
+  - [ ] Epsilon
+  - [ ] Pi
+  - [ ] DegreeToRadian
+  - [ ] RadianToDegree
+

@@ -1,0 +1,130 @@
+\doxysection{include/zroc/memory/zroc\+\_\+memory.h File Reference}
+\hypertarget{zroc__memory_8h}{}\label{zroc__memory_8h}\index{include/zroc/memory/zroc\_memory.h@{include/zroc/memory/zroc\_memory.h}}
+
+
+Memory allocation wrappers with error checking.  
+
+
+{\ttfamily \#include "{}zroc/error/zroc\+\_\+error.\+h"{}}\newline
+{\ttfamily \#include "{}zroc/log/zroc\+\_\+log.\+h"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{zroc__memory_8h_a6f64cfc4516e7cb03b81bfe72632bbc1}{zroc\+\_\+malloc}} (size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Allocate memory safely. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{zroc__memory_8h_aa6cc6ea184476488bee999902853a98a}{zroc\+\_\+malloc\+\_\+dbg}} (size\+\_\+t size, const char \texorpdfstring{$\ast$}{*}file, int line)
+\begin{DoxyCompactList}\small\item\em Same as zroc\+\_\+malloc with line and file logged. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{zroc__memory_8h_a6beb2342c311e02fa38e25e8cb961f59}{zroc\+\_\+calloc}} (size\+\_\+t count, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Allocate zero-\/initialized memory safely. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{zroc__memory_8h_a4dfef53c9ac5006af906712f008f2298}{zroc\+\_\+realloc}} (void \texorpdfstring{$\ast$}{*}ptr, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Resize previously allocated memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{zroc__memory_8h_a60da66b7fc5a35e050af787d37fc97b3}{zroc\+\_\+free}} (void \texorpdfstring{$\ast$}{*}ptr)
+\begin{DoxyCompactList}\small\item\em Free memory safely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Memory allocation wrappers with error checking. 
+
+Provides safe malloc, calloc, realloc, and free functions that log errors internally on failure. 
+
+\label{doc-func-members}
+\Hypertarget{zroc__memory_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{zroc__memory_8h_a6beb2342c311e02fa38e25e8cb961f59}\index{zroc\_memory.h@{zroc\_memory.h}!zroc\_calloc@{zroc\_calloc}}
+\index{zroc\_calloc@{zroc\_calloc}!zroc\_memory.h@{zroc\_memory.h}}
+\doxysubsubsection{\texorpdfstring{zroc\_calloc()}{zroc\_calloc()}}
+{\footnotesize\ttfamily \label{zroc__memory_8h_a6beb2342c311e02fa38e25e8cb961f59} 
+void \texorpdfstring{$\ast$}{*} zroc\+\_\+calloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{count}{, }\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Allocate zero-\/initialized memory safely. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & Number of elements. \\
+\hline
+{\em size} & Size of each element. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to allocated memory, or NULL on failure.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Logs an error if allocation fails or if total size is invalid. 
+\end{DoxyNote}
+\Hypertarget{zroc__memory_8h_a60da66b7fc5a35e050af787d37fc97b3}\index{zroc\_memory.h@{zroc\_memory.h}!zroc\_free@{zroc\_free}}
+\index{zroc\_free@{zroc\_free}!zroc\_memory.h@{zroc\_memory.h}}
+\doxysubsubsection{\texorpdfstring{zroc\_free()}{zroc\_free()}}
+{\footnotesize\ttfamily \label{zroc__memory_8h_a60da66b7fc5a35e050af787d37fc97b3} 
+void zroc\+\_\+free (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})}
+
+
+
+Free memory safely. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Pointer to memory to free. Can be NULL. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{zroc__memory_8h_a6f64cfc4516e7cb03b81bfe72632bbc1}\index{zroc\_memory.h@{zroc\_memory.h}!zroc\_malloc@{zroc\_malloc}}
+\index{zroc\_malloc@{zroc\_malloc}!zroc\_memory.h@{zroc\_memory.h}}
+\doxysubsubsection{\texorpdfstring{zroc\_malloc()}{zroc\_malloc()}}
+{\footnotesize\ttfamily \label{zroc__memory_8h_a6f64cfc4516e7cb03b81bfe72632bbc1} 
+void \texorpdfstring{$\ast$}{*} zroc\+\_\+malloc (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Allocate memory safely. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Number of bytes to allocate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to allocated memory, or NULL on failure.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Logs an error if allocation fails or if size is invalid. 
+\end{DoxyNote}
+\Hypertarget{zroc__memory_8h_aa6cc6ea184476488bee999902853a98a}\index{zroc\_memory.h@{zroc\_memory.h}!zroc\_malloc\_dbg@{zroc\_malloc\_dbg}}
+\index{zroc\_malloc\_dbg@{zroc\_malloc\_dbg}!zroc\_memory.h@{zroc\_memory.h}}
+\doxysubsubsection{\texorpdfstring{zroc\_malloc\_dbg()}{zroc\_malloc\_dbg()}}
+{\footnotesize\ttfamily \label{zroc__memory_8h_aa6cc6ea184476488bee999902853a98a} 
+void \texorpdfstring{$\ast$}{*} zroc\+\_\+malloc\+\_\+dbg (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{file}{, }\item[{int}]{line}{}\end{DoxyParamCaption})}
+
+
+
+Same as zroc\+\_\+malloc with line and file logged. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{zroc__memory_8h_a6f64cfc4516e7cb03b81bfe72632bbc1}{zroc\+\_\+malloc} 
+\end{DoxySeeAlso}
+\Hypertarget{zroc__memory_8h_a4dfef53c9ac5006af906712f008f2298}\index{zroc\_memory.h@{zroc\_memory.h}!zroc\_realloc@{zroc\_realloc}}
+\index{zroc\_realloc@{zroc\_realloc}!zroc\_memory.h@{zroc\_memory.h}}
+\doxysubsubsection{\texorpdfstring{zroc\_realloc()}{zroc\_realloc()}}
+{\footnotesize\ttfamily \label{zroc__memory_8h_a4dfef53c9ac5006af906712f008f2298} 
+void \texorpdfstring{$\ast$}{*} zroc\+\_\+realloc (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{size\+\_\+t}]{size}{}\end{DoxyParamCaption})}
+
+
+
+Resize previously allocated memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & Pointer to previously allocated memory. \\
+\hline
+{\em size} & New size in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to resized memory, or NULL on failure.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Original memory is not freed if realloc fails. 
+
+Logs an error if allocation fails or if size is invalid. 
+\end{DoxyNote}

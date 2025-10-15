@@ -1,0 +1,32 @@
+\doxysection{zroc\+\_\+error.\+h}
+\hypertarget{zroc__error_8h_source}{}\label{zroc__error_8h_source}\index{include/zroc/error/zroc\_error.h@{include/zroc/error/zroc\_error.h}}
+\mbox{\hyperlink{zroc__error_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ ERR\_MSG\_MAX\_SIZE\ 256}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{zroc__error_8h_a6340f7a28709f8192fa324ff4f07bc7fa9a759b6562ff61139b10b6220d06bffe}{ZROC\_OK}}\ =\ 0,}
+\DoxyCodeLine{00018\ \ \ \mbox{\hyperlink{zroc__error_8h_a6340f7a28709f8192fa324ff4f07bc7faf33a4679cea63d39ff3ee04c0875cc96}{ZROC\_ERR\_INVALID\_ARG}},}
+\DoxyCodeLine{00019\ \ \ \mbox{\hyperlink{zroc__error_8h_a6340f7a28709f8192fa324ff4f07bc7fa41533111691f1bac49acb4a269493a15}{ZROC\_ERR\_OUT\_OF\_MEMORY}},}
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{zroc__error_8h_a6340f7a28709f8192fa324ff4f07bc7fac0a4833a9cfc75aa53695c751b0af5f4}{ZROC\_ERR\_ALLOC\_FAILED}},}
+\DoxyCodeLine{00021\ \ \ \mbox{\hyperlink{zroc__error_8h_a6340f7a28709f8192fa324ff4f07bc7fa3a782c262509cc841e56ab01d35d8c9b}{ZROC\_ERR\_CUSTOM}},}
+\DoxyCodeLine{00022\ \ \ \mbox{\hyperlink{zroc__error_8h_a6340f7a28709f8192fa324ff4f07bc7faca0d574c5785a39437bfeff15d57df13}{ZROC\_ERR\_UNKNOWN}}}
+\DoxyCodeLine{00023\ \}\ \mbox{\hyperlink{zroc__error_8h_a6340f7a28709f8192fa324ff4f07bc7f}{ZrocErrCode}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{zroc__error_8h_a6340f7a28709f8192fa324ff4f07bc7f}{ZrocErrCode}}\ \mbox{\hyperlink{structZrocErr_a73fd92c7b52c1442156c2028ec4a8ed7}{code}};\ }
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structZrocErr_a0b2e8c7f76df48129f994ecc46d5c66c}{message}};\ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Change\ to\ utf8\ message\ once\ library\ is\ done}}
+\DoxyCodeLine{00032\ \}\ \mbox{\hyperlink{structZrocErr}{ZrocErr}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{structZrocErr}{ZrocErr}}\ \mbox{\hyperlink{zroc__error_8c_af90f47e36f6fd3588df79039a6dd332e}{ZROC\_ERRORS}}[];}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00049\ \mbox{\hyperlink{structZrocErr}{ZrocErr}}\ *\mbox{\hyperlink{zroc__error_8h_a2fd7a0b4bad0021bf4e749b184c96968}{zroc\_err\_get}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{zroc__error_8h_ac3b5134d4b68d73b4648c2c8d024bbe8}{zroc\_err\_set}}(\mbox{\hyperlink{zroc__error_8h_a6340f7a28709f8192fa324ff4f07bc7f}{ZrocErrCode}}\ code,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *msg);}
+
+\end{DoxyCode}

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="structZrocLogger" kind="struct" language="C++" prot="public">
+    <compoundname>ZrocLogger</compoundname>
+    <includes refid="zroc__log_8h" local="no">zroc_log.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structZrocLogger_1acf4d33ee4cff36f69b924471174dcb11" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <qualifiedname>ZrocLogger::level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Minimum log level to output. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/log/zroc_log.h" line="31" column="7" bodyfile="include/zroc/log/zroc_log.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structZrocLogger_1ab41bf19330e50c3c7bf3544c53f30971" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <qualifiedname>ZrocLogger::output</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Output stream (e.g., stderr, file). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/log/zroc_log.h" line="32" column="8" bodyfile="include/zroc/log/zroc_log.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structZrocLogger_1a5b41c5ae4505891e6c53e26df197e02b" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* prefix</definition>
+        <argsstring></argsstring>
+        <name>prefix</name>
+        <qualifiedname>ZrocLogger::prefix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optional prefix string for all messages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/log/zroc_log.h" line="33" column="14" bodyfile="include/zroc/log/zroc_log.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a logger object. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A logger controls where messages are written and which level of messages are actually output. </para>
+    </detaileddescription>
+    <location file="include/zroc/log/zroc_log.h" line="30" column="1" bodyfile="include/zroc/log/zroc_log.h" bodystart="30" bodyend="34"/>
+    <listofallmembers>
+      <member refid="structZrocLogger_1acf4d33ee4cff36f69b924471174dcb11" prot="public" virt="non-virtual"><scope>ZrocLogger</scope><name>level</name></member>
+      <member refid="structZrocLogger_1ab41bf19330e50c3c7bf3544c53f30971" prot="public" virt="non-virtual"><scope>ZrocLogger</scope><name>output</name></member>
+      <member refid="structZrocLogger_1a5b41c5ae4505891e6c53e26df197e02b" prot="public" virt="non-virtual"><scope>ZrocLogger</scope><name>prefix</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

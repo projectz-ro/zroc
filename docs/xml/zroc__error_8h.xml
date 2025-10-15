@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="zroc__error_8h" kind="file" language="C++">
+    <compoundname>zroc_error.h</compoundname>
+    <includedby refid="zroc__memory_8h" local="yes">include/zroc/memory/zroc_memory.h</includedby>
+    <includedby refid="zroc_8h" local="yes">include/zroc/zroc.h</includedby>
+    <includedby refid="zroc__error_8c" local="yes">src/error/zroc_error.c</includedby>
+    <includedby refid="zroc__memory_8c" local="yes">src/memory/zroc_memory.c</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/zroc/error/zroc_error.h</label>
+        <link refid="zroc__error_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>include/zroc/memory/zroc_memory.h</label>
+        <link refid="zroc__memory_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>include/zroc/zroc.h</label>
+        <link refid="zroc_8h"/>
+      </node>
+      <node id="3">
+        <label>src/error/zroc_error.c</label>
+        <link refid="zroc__error_8c"/>
+      </node>
+      <node id="4">
+        <label>src/memory/zroc_memory.c</label>
+        <link refid="zroc__memory_8c"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structZrocErr" prot="public">ZrocErr</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="zroc__error_8h_1afcad1364c748668960a68cd178dbe988" prot="public" static="no">
+        <name>ERR_MSG_MAX_SIZE</name>
+        <initializer>256</initializer>
+        <briefdescription>
+<para>Maximum length of an error message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/error/zroc_error.h" line="11" column="9" bodyfile="include/zroc/error/zroc_error.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ZrocErrCode</name>
+        <enumvalue id="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa9a759b6562ff61139b10b6220d06bffe" prot="public">
+          <name>ZROC_OK</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faf33a4679cea63d39ff3ee04c0875cc96" prot="public">
+          <name>ZROC_ERR_INVALID_ARG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa41533111691f1bac49acb4a269493a15" prot="public">
+          <name>ZROC_ERR_OUT_OF_MEMORY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fac0a4833a9cfc75aa53695c751b0af5f4" prot="public">
+          <name>ZROC_ERR_ALLOC_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa3a782c262509cc841e56ab01d35d8c9b" prot="public">
+          <name>ZROC_ERR_CUSTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faca0d574c5785a39437bfeff15d57df13" prot="public">
+          <name>ZROC_ERR_UNKNOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Codes representing different types of errors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/error/zroc_error.h" line="16" column="1" bodyfile="include/zroc/error/zroc_error.h" bodystart="16" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="zroc__error_8h_1af90f47e36f6fd3588df79039a6dd332e" prot="public" static="no" extern="yes" mutable="no">
+        <type><ref refid="structZrocErr" kindref="compound">ZrocErr</ref></type>
+        <definition>ZrocErr ZROC_ERRORS[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ZROC_ERRORS</name>
+        <briefdescription>
+<para>Array of default errors with messages for each error code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used as the source for default messages when none is provided. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/error/zroc_error.h" line="39" column="16" bodyfile="src/error/zroc_error.c" bodystart="8" bodyend="15" declfile="include/zroc/error/zroc_error.h" declline="39" declcolumn="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="zroc__error_8h_1a2fd7a0b4bad0021bf4e749b184c96968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structZrocErr" kindref="compound">ZrocErr</ref> *</type>
+        <definition>ZrocErr * zroc_err_get</definition>
+        <argsstring>(void)</argsstring>
+        <name>zroc_err_get</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Get the thread-local error object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the thread does not have an error object yet, one will be allocated and initialized with code <computeroutput>ZROC_OK</computeroutput> and an empty message.</para>
+<para><simplesect kind="return"><para>Pointer to the thread-local <ref refid="structZrocErr" kindref="compound">ZrocErr</ref> object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/error/zroc_error.h" line="49" column="9" bodyfile="src/error/zroc_error.c" bodystart="21" bodyend="31" declfile="include/zroc/error/zroc_error.h" declline="49" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="zroc__error_8h_1ac3b5134d4b68d73b4648c2c8d024bbe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void zroc_err_set</definition>
+        <argsstring>(ZrocErrCode code, const char *msg)</argsstring>
+        <name>zroc_err_set</name>
+        <param>
+          <type><ref refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f" kindref="member">ZrocErrCode</ref></type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>Set the thread-local error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the thread-local error code and message. If <computeroutput>msg</computeroutput> is <computeroutput>NULL</computeroutput>, the default message for the given <computeroutput>code</computeroutput> from <computeroutput>ZROC_ERRORS</computeroutput> will be used.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error code to set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional error message. If NULL, the default is used. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/error/zroc_error.h" line="60" column="6" bodyfile="src/error/zroc_error.c" bodystart="33" bodyend="40" declfile="include/zroc/error/zroc_error.h" declline="60" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Thread-local error handling system for Zroc. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="zroc__error_8h_1afcad1364c748668960a68cd178dbe988" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERR_MSG_MAX_SIZE<sp/>256</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa9a759b6562ff61139b10b6220d06bffe" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa9a759b6562ff61139b10b6220d06bffe" kindref="member">ZROC_OK</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="18" refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faf33a4679cea63d39ff3ee04c0875cc96" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faf33a4679cea63d39ff3ee04c0875cc96" kindref="member">ZROC_ERR_INVALID_ARG</ref>,</highlight></codeline>
+<codeline lineno="19" refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa41533111691f1bac49acb4a269493a15" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa41533111691f1bac49acb4a269493a15" kindref="member">ZROC_ERR_OUT_OF_MEMORY</ref>,</highlight></codeline>
+<codeline lineno="20" refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fac0a4833a9cfc75aa53695c751b0af5f4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fac0a4833a9cfc75aa53695c751b0af5f4" kindref="member">ZROC_ERR_ALLOC_FAILED</ref>,</highlight></codeline>
+<codeline lineno="21" refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa3a782c262509cc841e56ab01d35d8c9b" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa3a782c262509cc841e56ab01d35d8c9b" kindref="member">ZROC_ERR_CUSTOM</ref>,</highlight></codeline>
+<codeline lineno="22" refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faca0d574c5785a39437bfeff15d57df13" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faca0d574c5785a39437bfeff15d57df13" kindref="member">ZROC_ERR_UNKNOWN</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}<sp/><ref refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f" kindref="member">ZrocErrCode</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="structZrocErr" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="structZrocErr_1a73fd92c7b52c1442156c2028ec4a8ed7" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f" kindref="member">ZrocErrCode</ref><sp/><ref refid="structZrocErr_1a73fd92c7b52c1442156c2028ec4a8ed7" kindref="member">code</ref>;<sp/></highlight></codeline>
+<codeline lineno="30" refid="structZrocErr_1a0b2e8c7f76df48129f994ecc46d5c66c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structZrocErr_1a0b2e8c7f76df48129f994ecc46d5c66c" kindref="member">message</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Change<sp/>to<sp/>utf8<sp/>message<sp/>once<sp/>library<sp/>is<sp/>done</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/><ref refid="structZrocErr" kindref="compound">ZrocErr</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structZrocErr" kindref="compound">ZrocErr</ref><sp/><ref refid="zroc__error_8c_1af90f47e36f6fd3588df79039a6dd332e" kindref="member">ZROC_ERRORS</ref>[];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><ref refid="structZrocErr" kindref="compound">ZrocErr</ref><sp/>*<ref refid="zroc__error_8h_1a2fd7a0b4bad0021bf4e749b184c96968" kindref="member">zroc_err_get</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="zroc__error_8h_1ac3b5134d4b68d73b4648c2c8d024bbe8" kindref="member">zroc_err_set</ref>(<ref refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f" kindref="member">ZrocErrCode</ref><sp/>code,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*msg);</highlight></codeline>
+    </programlisting>
+    <location file="include/zroc/error/zroc_error.h"/>
+  </compounddef>
+</doxygen>

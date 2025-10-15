@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_zroc__mem__sizes_8h_source" xml:lang="en-US">
+<title>zroc_mem_sizes.h</title>
+<indexterm><primary>include/zroc/memory/zroc_mem_sizes.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_base__types_8h">zroc/base_types.h</link>&quot;</emphasis>
+3 
+4 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;KiB(<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;x)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;x&#32;*&#32;1024ULL;&#32;}
+5 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;MiB(<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;x)&#32;{
+6 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(x&#32;&lt;=&#32;(SIZE_MAX&#32;/&#32;(1024ULL&#32;*&#32;1024ULL)))&#32;?&#32;x&#32;*&#32;1024ULL&#32;*&#32;1024ULL
+7 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;0;
+8 }
+9 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;GiB(<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>&#32;x)&#32;{
+10 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(x&#32;&lt;=&#32;(SIZE_MAX&#32;/&#32;(1024ULL&#32;*&#32;1024ULL&#32;*&#32;1024ULL)))
+11 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;?&#32;x&#32;*&#32;1024ULL&#32;*&#32;1024ULL&#32;*&#32;1024ULL
+12 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;0;
+13 }
+</programlisting></section>

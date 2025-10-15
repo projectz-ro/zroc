@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>zroc</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ZroC,<sp/>Collection<sp/>of<sp/>useful<sp/>C<sp/>libraries</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Errors</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Error<sp/>types<sp/>via<sp/>enum</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Type<sp/>to<sp/>string</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Logging</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Simple<sp/>logging<sp/>with<sp/>formatting</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Memory</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Simple<sp/>malloc,<sp/>calloc,<sp/>realloc,<sp/>free<sp/>wrappers</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Wrap<sp/>basics<sp/>with<sp/>basic<sp/>validation<sp/>and<sp/>check<sp/>for<sp/>success</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Data<sp/>Structures</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Array</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Dynamic<sp/>Array</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Stack</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Queue</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Ring<sp/>Buffer</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Linked<sp/>List<sp/>(Doubly)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Hash<sp/>Map</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>BST</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Quad/Oct<sp/>Tree</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Red/Black<sp/>Tree</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Heap(Min<sp/>/<sp/>Max)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Graph</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Algorithms</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Merge<sp/>Sort</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Quick<sp/>Sort</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Bubble<sp/>Sort</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Math</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Vectors</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>2D,<sp/>3D</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>add,<sp/>sub,<sp/>mult,<sp/>div</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>dot<sp/>product</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>scaling<sp/>(multiply<sp/>by<sp/>scalar)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Matrices</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>mat2,<sp/>mat3,<sp/>mat4</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>invert,<sp/>determinant,<sp/>transpose</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>add,<sp/>sub,<sp/>mult,<sp/>div</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Constants</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Epsilon</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>Pi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>DegreeToRadian</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>RadianToDegree</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

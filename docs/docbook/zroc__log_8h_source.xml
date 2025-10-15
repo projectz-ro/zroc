@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_zroc__log_8h_source" xml:lang="en-US">
+<title>zroc_log.h</title>
+<indexterm><primary>include/zroc/log/zroc_log.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+7 
+8 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+9 
+10 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+11 
+16 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link>&#32;{
+17 &#32;&#32;<link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba8f14d082f34bfebfb827197e252c8875">ZROC_LOG_DEBUG</link>,&#32;
+18 &#32;&#32;<link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba4c3bd9b7a3c33152a14b4f78658175f1">ZROC_LOG_INFO</link>,&#32;&#32;
+19 &#32;&#32;<link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba3bdd732631559c29279afbf96740b022">ZROC_LOG_WARN</link>,&#32;&#32;
+20 &#32;&#32;<link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba63dd4fa64ee392a11d3e79b1d60efd18">ZROC_LOG_ERROR</link>&#32;&#32;
+21 }&#32;<link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link>;
+22 
+30 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis><link linkend="_structZrocLogger">ZrocLogger</link>&#32;{
+31 &#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_structZrocLogger_1acf4d33ee4cff36f69b924471174dcb11">level</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+32 &#32;&#32;FILE&#32;*<link linkend="_structZrocLogger_1ab41bf19330e50c3c7bf3544c53f30971">output</link>;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+33 &#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_structZrocLogger_1a5b41c5ae4505891e6c53e26df197e02b">prefix</link>;&#32;
+34 }&#32;<link linkend="_structZrocLogger">ZrocLogger</link>;
+35 
+46 <link linkend="_structZrocLogger">ZrocLogger</link>&#32;*<link linkend="_zroc__log_8h_1aff27c4128e0a65b3baa3793d1c16bfc3">zroc_logger_create</link>(FILE&#32;*output,&#32;<emphasis role="keywordtype">int</emphasis>&#32;level,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*prefix);
+47 
+53 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_zroc__log_8h_1a90a43150d5733042eaa9d629bfde7973">zroc_logger_free</link>(<link linkend="_structZrocLogger">ZrocLogger</link>&#32;*logger);
+54 
+65 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_zroc__log_8h_1a7f73d92b4e575eee7379e19227fa2933">zroc_log</link>(<link linkend="_structZrocLogger">ZrocLogger</link>&#32;*logger,&#32;<link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link>&#32;lvl,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*fmt,&#32;...);
+</programlisting></section>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.14.0" xml:lang="en-US">
+  <compound refid="structZrocErr" kind="struct"><name>ZrocErr</name>
+    <member refid="structZrocErr_1a73fd92c7b52c1442156c2028ec4a8ed7" kind="variable"><name>code</name></member>
+    <member refid="structZrocErr_1a0b2e8c7f76df48129f994ecc46d5c66c" kind="variable"><name>message</name></member>
+  </compound>
+  <compound refid="structZrocLogger" kind="struct"><name>ZrocLogger</name>
+    <member refid="structZrocLogger_1acf4d33ee4cff36f69b924471174dcb11" kind="variable"><name>level</name></member>
+    <member refid="structZrocLogger_1ab41bf19330e50c3c7bf3544c53f30971" kind="variable"><name>output</name></member>
+    <member refid="structZrocLogger_1a5b41c5ae4505891e6c53e26df197e02b" kind="variable"><name>prefix</name></member>
+  </compound>
+  <compound refid="base__types_8h" kind="file"><name>base_types.h</name>
+    <member refid="base__types_8h_1a92c50087ca0e64fa93fc59402c55f8ca" kind="typedef"><name>u8</name></member>
+    <member refid="base__types_8h_1ae3702327b5f47e83b431e22b33da7b58" kind="typedef"><name>i8</name></member>
+    <member refid="base__types_8h_1ace9d960e74685e2cd84b36132dbbf8aa" kind="typedef"><name>u16</name></member>
+    <member refid="base__types_8h_1ad309dbcaeea13aa602d686964156ea0b" kind="typedef"><name>i16</name></member>
+    <member refid="base__types_8h_1afaa62991928fb9fb18ff0db62a040aba" kind="typedef"><name>u32</name></member>
+    <member refid="base__types_8h_1a48d6cd8e4135fb2ff7e7f2dac84089ec" kind="typedef"><name>i32</name></member>
+    <member refid="base__types_8h_1a3f7e2bcbb0b4c338f3c4f6c937cd4234" kind="typedef"><name>u64</name></member>
+    <member refid="base__types_8h_1a85cb35fbe5bf2961d7ad5f26814a91a2" kind="typedef"><name>i64</name></member>
+    <member refid="base__types_8h_1a5148c9c1252e19e12def2814f71690e3" kind="typedef"><name>usize</name></member>
+    <member refid="base__types_8h_1a2992909b9c1ee26479af8fa433d4479f" kind="typedef"><name>isize</name></member>
+    <member refid="base__types_8h_1a5f6906312a689f27d70e9d086649d3fd" kind="typedef"><name>f32</name></member>
+    <member refid="base__types_8h_1a94dab5770726ccbef8c7d026cfbdf8e5" kind="typedef"><name>f64</name></member>
+    <member refid="base__types_8h_1af29b166bf5fea7f0bbc07f7014a8c6b5" kind="typedef"><name>boolean</name></member>
+    <member refid="base__types_8h_1a8fa5a7ddaf7b4d44d3dde63343d8d844" kind="typedef"><name>cstr</name></member>
+    <member refid="base__types_8h_1ab862f2d862051450cf946971b59176da" kind="typedef"><name>byte</name></member>
+  </compound>
+  <compound refid="zroc__bits_8h" kind="file"><name>zroc_bits.h</name>
+    <member refid="zroc__bits_8h_1ae4977b84f5c59e02c5ccc94de0b45f68" kind="function"><name>bit</name></member>
+    <member refid="zroc__bits_8h_1a329aa232daedf19f832124f737a68a31" kind="function"><name>set_bit</name></member>
+    <member refid="zroc__bits_8h_1a2f031713071b8843525f0d56117ba348" kind="function"><name>clear_bit</name></member>
+    <member refid="zroc__bits_8h_1a55569b40e2136136402e9b96ea066ae1" kind="function"><name>toggle_bit</name></member>
+    <member refid="zroc__bits_8h_1aaa7e6074dbd4cfc053f033452a2caf11" kind="function"><name>check_bit</name></member>
+  </compound>
+  <compound refid="zroc__error_8h" kind="file"><name>zroc_error.h</name>
+    <member refid="zroc__error_8h_1afcad1364c748668960a68cd178dbe988" kind="define"><name>ERR_MSG_MAX_SIZE</name></member>
+    <member refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f" kind="enum"><name>ZrocErrCode</name></member>
+    <member refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa9a759b6562ff61139b10b6220d06bffe" kind="enumvalue"><name>ZROC_OK</name></member>
+    <member refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faf33a4679cea63d39ff3ee04c0875cc96" kind="enumvalue"><name>ZROC_ERR_INVALID_ARG</name></member>
+    <member refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa41533111691f1bac49acb4a269493a15" kind="enumvalue"><name>ZROC_ERR_OUT_OF_MEMORY</name></member>
+    <member refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fac0a4833a9cfc75aa53695c751b0af5f4" kind="enumvalue"><name>ZROC_ERR_ALLOC_FAILED</name></member>
+    <member refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa3a782c262509cc841e56ab01d35d8c9b" kind="enumvalue"><name>ZROC_ERR_CUSTOM</name></member>
+    <member refid="zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faca0d574c5785a39437bfeff15d57df13" kind="enumvalue"><name>ZROC_ERR_UNKNOWN</name></member>
+    <member refid="zroc__error_8h_1af90f47e36f6fd3588df79039a6dd332e" kind="variable"><name>ZROC_ERRORS</name></member>
+    <member refid="zroc__error_8h_1a2fd7a0b4bad0021bf4e749b184c96968" kind="function"><name>zroc_err_get</name></member>
+    <member refid="zroc__error_8h_1ac3b5134d4b68d73b4648c2c8d024bbe8" kind="function"><name>zroc_err_set</name></member>
+  </compound>
+  <compound refid="zroc__log_8h" kind="file"><name>zroc_log.h</name>
+    <member refid="zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b" kind="enum"><name>ZrocLogLevel</name></member>
+    <member refid="zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba8f14d082f34bfebfb827197e252c8875" kind="enumvalue"><name>ZROC_LOG_DEBUG</name></member>
+    <member refid="zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba4c3bd9b7a3c33152a14b4f78658175f1" kind="enumvalue"><name>ZROC_LOG_INFO</name></member>
+    <member refid="zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba3bdd732631559c29279afbf96740b022" kind="enumvalue"><name>ZROC_LOG_WARN</name></member>
+    <member refid="zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba63dd4fa64ee392a11d3e79b1d60efd18" kind="enumvalue"><name>ZROC_LOG_ERROR</name></member>
+    <member refid="zroc__log_8h_1a2ff341e556c2a5f0449abcd111bd74a4" kind="typedef"><name>ZrocLogLevel</name></member>
+    <member refid="zroc__log_8h_1a5bca1093cd1e4cbba18a5b1e79e0dce1" kind="typedef"><name>ZrocLogger</name></member>
+    <member refid="zroc__log_8h_1aff27c4128e0a65b3baa3793d1c16bfc3" kind="function"><name>zroc_logger_create</name></member>
+    <member refid="zroc__log_8h_1a90a43150d5733042eaa9d629bfde7973" kind="function"><name>zroc_logger_free</name></member>
+    <member refid="zroc__log_8h_1a7f73d92b4e575eee7379e19227fa2933" kind="function"><name>zroc_log</name></member>
+  </compound>
+  <compound refid="zroc__mem__sizes_8h" kind="file"><name>zroc_mem_sizes.h</name>
+    <member refid="zroc__mem__sizes_8h_1a193ab1a8d6d5821d77a3b2d765fea9ab" kind="function"><name>KiB</name></member>
+    <member refid="zroc__mem__sizes_8h_1a72e5a283d106bdbbca1ae06c2e34836f" kind="function"><name>MiB</name></member>
+    <member refid="zroc__mem__sizes_8h_1a9e0a0b416d9dd556f4eb4711b7488e03" kind="function"><name>GiB</name></member>
+  </compound>
+  <compound refid="zroc__memory_8h" kind="file"><name>zroc_memory.h</name>
+    <member refid="zroc__memory_8h_1a6f64cfc4516e7cb03b81bfe72632bbc1" kind="function"><name>zroc_malloc</name></member>
+    <member refid="zroc__memory_8h_1aa6cc6ea184476488bee999902853a98a" kind="function"><name>zroc_malloc_dbg</name></member>
+    <member refid="zroc__memory_8h_1a6beb2342c311e02fa38e25e8cb961f59" kind="function"><name>zroc_calloc</name></member>
+    <member refid="zroc__memory_8h_1a4dfef53c9ac5006af906712f008f2298" kind="function"><name>zroc_realloc</name></member>
+    <member refid="zroc__memory_8h_1a60da66b7fc5a35e050af787d37fc97b3" kind="function"><name>zroc_free</name></member>
+  </compound>
+  <compound refid="zroc_8h" kind="file"><name>zroc.h</name>
+  </compound>
+  <compound refid="zroc__error_8c" kind="file"><name>zroc_error.c</name>
+    <member refid="zroc__error_8c_1af90f47e36f6fd3588df79039a6dd332e" kind="variable"><name>ZROC_ERRORS</name></member>
+    <member refid="zroc__error_8c_1a0eba12c49e86c3e9798006cb53892016" kind="variable"><name>error_key</name></member>
+    <member refid="zroc__error_8c_1a8fe64f4d6be40dc775ec4467b20dd8d3" kind="variable"><name>error_key_once</name></member>
+    <member refid="zroc__error_8c_1a2bc8d2ae6e2d11fdd83f63232a0f90fc" kind="function"><name>make_error_key</name></member>
+    <member refid="zroc__error_8c_1a2fd7a0b4bad0021bf4e749b184c96968" kind="function"><name>zroc_err_get</name></member>
+    <member refid="zroc__error_8c_1ac3b5134d4b68d73b4648c2c8d024bbe8" kind="function"><name>zroc_err_set</name></member>
+  </compound>
+  <compound refid="zroc__log_8c" kind="file"><name>zroc_log.c</name>
+    <member refid="zroc__log_8c_1aece99b38e58316e4174cbdf7744e842d" kind="variable"><name>internal_logger</name></member>
+    <member refid="zroc__log_8c_1aff27c4128e0a65b3baa3793d1c16bfc3" kind="function"><name>zroc_logger_create</name></member>
+    <member refid="zroc__log_8c_1a7f73d92b4e575eee7379e19227fa2933" kind="function"><name>zroc_log</name></member>
+    <member refid="zroc__log_8c_1a90a43150d5733042eaa9d629bfde7973" kind="function"><name>zroc_logger_free</name></member>
+  </compound>
+  <compound refid="zroc__memory_8c" kind="file"><name>zroc_memory.c</name>
+    <member refid="zroc__memory_8c_1a6f64cfc4516e7cb03b81bfe72632bbc1" kind="function"><name>zroc_malloc</name></member>
+    <member refid="zroc__memory_8c_1a6beb2342c311e02fa38e25e8cb961f59" kind="function"><name>zroc_calloc</name></member>
+    <member refid="zroc__memory_8c_1a4dfef53c9ac5006af906712f008f2298" kind="function"><name>zroc_realloc</name></member>
+    <member refid="zroc__memory_8c_1a60da66b7fc5a35e050af787d37fc97b3" kind="function"><name>zroc_free</name></member>
+  </compound>
+  <compound refid="dir_196bada0f2aacef65af860dadf14f238" kind="dir"><name>include/zroc/bits</name>
+  </compound>
+  <compound refid="dir_70feb687ec7d86273f84dd943972cbcc" kind="dir"><name>include/zroc/error</name>
+  </compound>
+  <compound refid="dir_acc2056b73c4fda97caebb7ceca7df66" kind="dir"><name>src/error</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_ecbd93957393734f479c855a032a94b1" kind="dir"><name>include/zroc/log</name>
+  </compound>
+  <compound refid="dir_2241064965c8d9ca993f08b926076f7d" kind="dir"><name>src/log</name>
+  </compound>
+  <compound refid="dir_1cf3b639bdab0853580008de6ba8ea74" kind="dir"><name>include/zroc/memory</name>
+  </compound>
+  <compound refid="dir_94d7edf6f8f3d9af5fd63c44172da41c" kind="dir"><name>src/memory</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_5359452794771cd9a0793a2e746361ed" kind="dir"><name>include/zroc</name>
+  </compound>
+</doxygenindex>

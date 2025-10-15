@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structZrocLogger" xml:lang="en-US">
+<title>ZrocLogger Struct Reference</title>
+<indexterm><primary>ZrocLogger</primary></indexterm>
+<para>
+
+<para>Represents a logger object. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;zroc_log.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structZrocLogger_1acf4d33ee4cff36f69b924471174dcb11">level</link></para>
+</listitem>
+            <listitem><para>FILE * <link linkend="_structZrocLogger_1ab41bf19330e50c3c7bf3544c53f30971">output</link></para>
+</listitem>
+            <listitem><para>const char * <link linkend="_structZrocLogger_1a5b41c5ae4505891e6c53e26df197e02b">prefix</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a logger object. </para>
+
+
+
+<para>A logger controls where messages are written and which level of messages are actually output. </para>
+</section>
+<section>
+<title>Field Documentation</title>
+<anchor xml:id="_structZrocLogger_1acf4d33ee4cff36f69b924471174dcb11"/><section>
+    <title>level</title>
+<indexterm><primary>level</primary><secondary>ZrocLogger</secondary></indexterm>
+<indexterm><primary>ZrocLogger</primary><secondary>level</secondary></indexterm>
+<para><computeroutput>int level</computeroutput></para>
+<para>Minimum log level to output. </para>
+</section>
+<anchor xml:id="_structZrocLogger_1ab41bf19330e50c3c7bf3544c53f30971"/><section>
+    <title>output</title>
+<indexterm><primary>output</primary><secondary>ZrocLogger</secondary></indexterm>
+<indexterm><primary>ZrocLogger</primary><secondary>output</secondary></indexterm>
+<para><computeroutput>FILE* output</computeroutput></para>
+<para>Output stream (e.g., stderr, file). </para>
+</section>
+<anchor xml:id="_structZrocLogger_1a5b41c5ae4505891e6c53e26df197e02b"/><section>
+    <title>prefix</title>
+<indexterm><primary>prefix</primary><secondary>ZrocLogger</secondary></indexterm>
+<indexterm><primary>ZrocLogger</primary><secondary>prefix</secondary></indexterm>
+<para><computeroutput>const char* prefix</computeroutput></para>
+<para>Optional prefix string for all messages. </para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+include/zroc/log/<link linkend="_zroc__log_8h">zroc_log.h</link></section>
+</section>

@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_zroc__log_8h" xml:lang="en-US">
+<title>include/zroc/log/zroc_log.h File Reference</title>
+<indexterm><primary>include/zroc/log/zroc_log.h</primary></indexterm>
+<para>
+
+<para>Logging utilities for ZroC. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structZrocLogger">ZrocLogger</link></para>
+
+<para>Represents a logger object. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef enum <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link> <link linkend="_zroc__log_8h_1a2ff341e556c2a5f0449abcd111bd74a4">ZrocLogLevel</link></para>
+</listitem>
+            <listitem><para>typedef struct ZrocLogger <link linkend="_zroc__log_8h_1a5bca1093cd1e4cbba18a5b1e79e0dce1">ZrocLogger</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link> { <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba8f14d082f34bfebfb827197e252c8875">ZROC_LOG_DEBUG</link>
+, <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba4c3bd9b7a3c33152a14b4f78658175f1">ZROC_LOG_INFO</link>
+, <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba3bdd732631559c29279afbf96740b022">ZROC_LOG_WARN</link>
+, <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba63dd4fa64ee392a11d3e79b1d60efd18">ZROC_LOG_ERROR</link>
+ }</para>
+
+<para>Log levels supported by ZroC. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structZrocLogger">ZrocLogger</link> * <link linkend="_zroc__log_8h_1aff27c4128e0a65b3baa3793d1c16bfc3">zroc_logger_create</link> (FILE *output, int level, const char *prefix)</para>
+
+<para>Create a new logger. </para>
+</listitem>
+            <listitem><para>void <link linkend="_zroc__log_8h_1a90a43150d5733042eaa9d629bfde7973">zroc_logger_free</link> (<link linkend="_structZrocLogger">ZrocLogger</link> *logger)</para>
+
+<para>Free a logger. </para>
+</listitem>
+            <listitem><para>void <link linkend="_zroc__log_8h_1a7f73d92b4e575eee7379e19227fa2933">zroc_log</link> (<link linkend="_structZrocLogger">ZrocLogger</link> *logger, <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link> lvl, const char *fmt,...)</para>
+
+<para>Log a formatted message. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Logging utilities for ZroC. </para>
+
+<para>Provides a simple logging API with log levels and optional prefixes. </para>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_zroc__log_8h_1a5bca1093cd1e4cbba18a5b1e79e0dce1"/><section>
+    <title>ZrocLogger</title>
+<indexterm><primary>ZrocLogger</primary><secondary>zroc_log.h</secondary></indexterm>
+<indexterm><primary>zroc_log.h</primary><secondary>ZrocLogger</secondary></indexterm>
+<para><computeroutput>typedef struct ZrocLogger ZrocLogger</computeroutput></para></section>
+<anchor xml:id="_zroc__log_8h_1a2ff341e556c2a5f0449abcd111bd74a4"/><section>
+    <title>ZrocLogLevel</title>
+<indexterm><primary>ZrocLogLevel</primary><secondary>zroc_log.h</secondary></indexterm>
+<indexterm><primary>zroc_log.h</primary><secondary>ZrocLogLevel</secondary></indexterm>
+<para><computeroutput>typedef enum <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link> <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link></computeroutput></para></section>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b"/><section>
+    <title>ZrocLogLevel</title>
+<indexterm><primary>ZrocLogLevel</primary><secondary>zroc_log.h</secondary></indexterm>
+<indexterm><primary>zroc_log.h</primary><secondary>ZrocLogLevel</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link></computeroutput></para><para>
+
+<para>Log levels supported by ZroC. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>ZROC_LOG_DEBUG</primary><secondary>zroc_log.h</secondary></indexterm>
+<indexterm><primary>zroc_log.h</primary><secondary>ZROC_LOG_DEBUG</secondary></indexterm>
+<anchor xml:id="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba8f14d082f34bfebfb827197e252c8875"/>ZROC_LOG_DEBUG</entry><entry>
+<para>Debug-level messages. </para>
+</entry></row><row><entry><indexterm><primary>ZROC_LOG_INFO</primary><secondary>zroc_log.h</secondary></indexterm>
+<indexterm><primary>zroc_log.h</primary><secondary>ZROC_LOG_INFO</secondary></indexterm>
+<anchor xml:id="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba4c3bd9b7a3c33152a14b4f78658175f1"/>ZROC_LOG_INFO</entry><entry>
+<para>Informational messages. </para>
+</entry></row><row><entry><indexterm><primary>ZROC_LOG_WARN</primary><secondary>zroc_log.h</secondary></indexterm>
+<indexterm><primary>zroc_log.h</primary><secondary>ZROC_LOG_WARN</secondary></indexterm>
+<anchor xml:id="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba3bdd732631559c29279afbf96740b022"/>ZROC_LOG_WARN</entry><entry>
+<para>Warning messages. </para>
+</entry></row><row><entry><indexterm><primary>ZROC_LOG_ERROR</primary><secondary>zroc_log.h</secondary></indexterm>
+<indexterm><primary>zroc_log.h</primary><secondary>ZROC_LOG_ERROR</secondary></indexterm>
+<anchor xml:id="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba63dd4fa64ee392a11d3e79b1d60efd18"/>ZROC_LOG_ERROR</entry><entry>
+<para>Error messages. </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_zroc__log_8h_1a7f73d92b4e575eee7379e19227fa2933"/><section>
+    <title>zroc_log()</title>
+<indexterm><primary>zroc_log</primary><secondary>zroc_log.h</secondary></indexterm>
+<indexterm><primary>zroc_log.h</primary><secondary>zroc_log</secondary></indexterm>
+<para><computeroutput>void zroc_log (<link linkend="_structZrocLogger">ZrocLogger</link> * logger, <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link> lvl, const char * fmt,  ...)</computeroutput></para><para>
+
+<para>Log a formatted message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>logger</entry><entry>
+<para>Pointer to the logger to use. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lvl</entry><entry>
+<para>Log level of this message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>fmt</entry><entry>
+<para>Format string (printf-style). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>...</entry><entry>
+<para>Format arguments.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>Messages with a level lower than the logger&apos;s <computeroutput>level</computeroutput> will be ignored. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_zroc__log_8h_1aff27c4128e0a65b3baa3793d1c16bfc3"/><section>
+    <title>zroc_logger_create()</title>
+<indexterm><primary>zroc_logger_create</primary><secondary>zroc_log.h</secondary></indexterm>
+<indexterm><primary>zroc_log.h</primary><secondary>zroc_logger_create</secondary></indexterm>
+<para><computeroutput><link linkend="_structZrocLogger">ZrocLogger</link> * zroc_logger_create (FILE * output, int level, const char * prefix)</computeroutput></para><para>
+
+<para>Create a new logger. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>output</entry><entry>
+<para>The output stream (e.g., stderr or a file pointer). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>level</entry><entry>
+<para>Minimum log level to output. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prefix</entry><entry>
+<para>Optional prefix to prepend to every message (can be NULL). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to a newly allocated <link linkend="_structZrocLogger">ZrocLogger</link>, or NULL on failure.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>The returned logger must be freed with <link linkend="_zroc__log_8h_1a90a43150d5733042eaa9d629bfde7973">zroc_logger_free()</link>. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_zroc__log_8h_1a90a43150d5733042eaa9d629bfde7973"/><section>
+    <title>zroc_logger_free()</title>
+<indexterm><primary>zroc_logger_free</primary><secondary>zroc_log.h</secondary></indexterm>
+<indexterm><primary>zroc_log.h</primary><secondary>zroc_logger_free</secondary></indexterm>
+<para><computeroutput>void zroc_logger_free (<link linkend="_structZrocLogger">ZrocLogger</link> * logger)</computeroutput></para><para>
+
+<para>Free a logger. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>logger</entry><entry>
+<para>Pointer to the logger to free. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

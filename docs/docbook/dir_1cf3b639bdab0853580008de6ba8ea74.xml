@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_1cf3b639bdab0853580008de6ba8ea74" xml:lang="en-US">
+<title>include/zroc/memory Directory Reference</title>
+<indexterm><primary>include/zroc/memory Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_zroc__mem__sizes_8h">zroc_mem_sizes.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_zroc__memory_8h">zroc_memory.h</link></para>
+
+<para>Memory allocation wrappers with error checking. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

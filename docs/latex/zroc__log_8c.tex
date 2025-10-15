@@ -1,0 +1,85 @@
+\doxysection{src/log/zroc\+\_\+log.c File Reference}
+\hypertarget{zroc__log_8c}{}\label{zroc__log_8c}\index{src/log/zroc\_log.c@{src/log/zroc\_log.c}}
+{\ttfamily \#include "{}zroc/log/zroc\+\_\+log.\+h"{}}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structZrocLogger}{Zroc\+Logger}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{zroc__log_8c_aff27c4128e0a65b3baa3793d1c16bfc3}{zroc\+\_\+logger\+\_\+create}} (FILE \texorpdfstring{$\ast$}{*}output, int level, const char \texorpdfstring{$\ast$}{*}prefix)
+\begin{DoxyCompactList}\small\item\em Create a new logger. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{zroc__log_8c_a7f73d92b4e575eee7379e19227fa2933}{zroc\+\_\+log}} (\mbox{\hyperlink{structZrocLogger}{Zroc\+Logger}} \texorpdfstring{$\ast$}{*}logger, \mbox{\hyperlink{zroc__log_8h_a7cf7b37b28ff90664625b59bb66c9b2b}{Zroc\+Log\+Level}} lvl, const char \texorpdfstring{$\ast$}{*}fmt,...)
+\begin{DoxyCompactList}\small\item\em Log a formatted message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{zroc__log_8c_a90a43150d5733042eaa9d629bfde7973}{zroc\+\_\+logger\+\_\+free}} (\mbox{\hyperlink{structZrocLogger}{Zroc\+Logger}} \texorpdfstring{$\ast$}{*}logger)
+\begin{DoxyCompactList}\small\item\em Free a logger. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{zroc__log_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{zroc__log_8c_a7f73d92b4e575eee7379e19227fa2933}\index{zroc\_log.c@{zroc\_log.c}!zroc\_log@{zroc\_log}}
+\index{zroc\_log@{zroc\_log}!zroc\_log.c@{zroc\_log.c}}
+\doxysubsubsection{\texorpdfstring{zroc\_log()}{zroc\_log()}}
+{\footnotesize\ttfamily \label{zroc__log_8c_a7f73d92b4e575eee7379e19227fa2933} 
+void zroc\+\_\+log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structZrocLogger}{Zroc\+Logger}} \texorpdfstring{$\ast$}{*}}]{logger}{, }\item[{\mbox{\hyperlink{zroc__log_8h_a7cf7b37b28ff90664625b59bb66c9b2b}{Zroc\+Log\+Level}}}]{lvl}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{fmt}{, }\item[{}]{...}{}\end{DoxyParamCaption})}
+
+
+
+Log a formatted message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Pointer to the logger to use. \\
+\hline
+{\em lvl} & Log level of this message. \\
+\hline
+{\em fmt} & Format string (printf-\/style). \\
+\hline
+{\em ...} & Format arguments.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Messages with a level lower than the logger\textquotesingle{}s {\ttfamily level} will be ignored. 
+\end{DoxyNote}
+\Hypertarget{zroc__log_8c_aff27c4128e0a65b3baa3793d1c16bfc3}\index{zroc\_log.c@{zroc\_log.c}!zroc\_logger\_create@{zroc\_logger\_create}}
+\index{zroc\_logger\_create@{zroc\_logger\_create}!zroc\_log.c@{zroc\_log.c}}
+\doxysubsubsection{\texorpdfstring{zroc\_logger\_create()}{zroc\_logger\_create()}}
+{\footnotesize\ttfamily \label{zroc__log_8c_aff27c4128e0a65b3baa3793d1c16bfc3} 
+\mbox{\hyperlink{structZrocLogger}{Zroc\+Logger}} \texorpdfstring{$\ast$}{*} zroc\+\_\+logger\+\_\+create (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{output}{, }\item[{int}]{level}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{prefix}{}\end{DoxyParamCaption})}
+
+
+
+Create a new logger. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & The output stream (e.\+g., stderr or a file pointer). \\
+\hline
+{\em level} & Minimum log level to output. \\
+\hline
+{\em prefix} & Optional prefix to prepend to every message (can be NULL). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to a newly allocated \doxylink{structZrocLogger}{Zroc\+Logger}, or NULL on failure.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The returned logger must be freed with \doxylink{zroc__log_8h_a90a43150d5733042eaa9d629bfde7973}{zroc\+\_\+logger\+\_\+free()}. 
+\end{DoxyNote}
+\Hypertarget{zroc__log_8c_a90a43150d5733042eaa9d629bfde7973}\index{zroc\_log.c@{zroc\_log.c}!zroc\_logger\_free@{zroc\_logger\_free}}
+\index{zroc\_logger\_free@{zroc\_logger\_free}!zroc\_log.c@{zroc\_log.c}}
+\doxysubsubsection{\texorpdfstring{zroc\_logger\_free()}{zroc\_logger\_free()}}
+{\footnotesize\ttfamily \label{zroc__log_8c_a90a43150d5733042eaa9d629bfde7973} 
+void zroc\+\_\+logger\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structZrocLogger}{Zroc\+Logger}} \texorpdfstring{$\ast$}{*}}]{logger}{}\end{DoxyParamCaption})}
+
+
+
+Free a logger. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em logger} & Pointer to the logger to free. \\
+\hline
+\end{DoxyParams}

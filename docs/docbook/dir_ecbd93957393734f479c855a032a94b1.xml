@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_ecbd93957393734f479c855a032a94b1" xml:lang="en-US">
+<title>include/zroc/log Directory Reference</title>
+<indexterm><primary>include/zroc/log Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_zroc__log_8h">zroc_log.h</link></para>
+
+<para>Logging utilities for ZroC. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="md_README" kind="page">
+    <compoundname>md_README</compoundname>
+    <title>zroc</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md_README_1autotoc_md0"/></para>
+<para>ZroC, Collection of useful C libraries</para>
+<sect1 id="md_README_1autotoc_md1">
+<title>Errors</title><para><itemizedlist>
+<listitem><para>Error types via enum</para>
+</listitem><listitem><para>Type to string</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_README_1autotoc_md2">
+<title>Logging</title><para><itemizedlist>
+<listitem><para>Simple logging with formatting</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_README_1autotoc_md3">
+<title>Memory</title><para><itemizedlist>
+<listitem><para>Simple malloc, calloc, realloc, free wrappers</para>
+</listitem><listitem><para>Wrap basics with basic validation and check for success</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_README_1autotoc_md4">
+<title>Data Structures</title><para><itemizedlist>
+<listitem><para>Array</para>
+</listitem><listitem><para>Dynamic Array</para>
+</listitem><listitem><para>Stack</para>
+</listitem><listitem><para>Queue</para>
+</listitem><listitem><para>Ring Buffer</para>
+</listitem><listitem><para>Linked List (Doubly)</para>
+</listitem><listitem><para>Hash Map</para>
+</listitem><listitem><para>BST</para>
+</listitem><listitem><para>Quad/Oct Tree</para>
+</listitem><listitem><para>Red/Black Tree</para>
+</listitem><listitem><para>Heap(Min / Max)</para>
+</listitem><listitem><para>Graph</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_README_1autotoc_md5">
+<title>Algorithms</title><para><itemizedlist>
+<listitem><para>Merge Sort</para>
+</listitem><listitem><para>Quick Sort</para>
+</listitem><listitem><para>Bubble Sort</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_README_1autotoc_md6">
+<title>Math</title><para><itemizedlist>
+<listitem><para>Vectors<itemizedlist>
+<listitem><para>2D, 3D</para>
+</listitem><listitem><para>add, sub, mult, div</para>
+</listitem><listitem><para>dot product</para>
+</listitem><listitem><para>scaling (multiply by scalar)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Matrices<itemizedlist>
+<listitem><para>mat2, mat3, mat4</para>
+</listitem><listitem><para>invert, determinant, transpose</para>
+</listitem><listitem><para>add, sub, mult, div</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Constants<itemizedlist>
+<listitem><para>Epsilon</para>
+</listitem><listitem><para>Pi</para>
+</listitem><listitem><para>DegreeToRadian</para>
+</listitem><listitem><para>RadianToDegree </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_70feb687ec7d86273f84dd943972cbcc" xml:lang="en-US">
+<title>include/zroc/error Directory Reference</title>
+<indexterm><primary>include/zroc/error Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_zroc__error_8h">zroc_error.h</link></para>
+
+<para>Thread-local error handling system for Zroc. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

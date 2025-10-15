@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_zroc__error_8h_source" xml:lang="en-US">
+<title>zroc_error.h</title>
+<indexterm><primary>include/zroc/error/zroc_error.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+5 
+6 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+7 
+11 <emphasis role="preprocessor">#define&#32;ERR_MSG_MAX_SIZE&#32;256</emphasis>
+12 
+16 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+17 &#32;&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa9a759b6562ff61139b10b6220d06bffe">ZROC_OK</link>&#32;=&#32;0,
+18 &#32;&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faf33a4679cea63d39ff3ee04c0875cc96">ZROC_ERR_INVALID_ARG</link>,
+19 &#32;&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa41533111691f1bac49acb4a269493a15">ZROC_ERR_OUT_OF_MEMORY</link>,
+20 &#32;&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fac0a4833a9cfc75aa53695c751b0af5f4">ZROC_ERR_ALLOC_FAILED</link>,
+21 &#32;&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa3a782c262509cc841e56ab01d35d8c9b">ZROC_ERR_CUSTOM</link>,
+22 &#32;&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faca0d574c5785a39437bfeff15d57df13">ZROC_ERR_UNKNOWN</link>
+23 }&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f">ZrocErrCode</link>;
+24 
+28 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+29 &#32;&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f">ZrocErrCode</link>&#32;<link linkend="_structZrocErr_1a73fd92c7b52c1442156c2028ec4a8ed7">code</link>;&#32;
+30 &#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_structZrocErr_1a0b2e8c7f76df48129f994ecc46d5c66c">message</link>;&#32;&#32;&#32;&#32;
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;TODO:&#32;Change&#32;to&#32;utf8&#32;message&#32;once&#32;library&#32;is&#32;done</emphasis>
+32 }&#32;<link linkend="_structZrocErr">ZrocErr</link>;
+33 
+39 <emphasis role="keyword">extern</emphasis>&#32;<link linkend="_structZrocErr">ZrocErr</link>&#32;<link linkend="_zroc__error_8c_1af90f47e36f6fd3588df79039a6dd332e">ZROC_ERRORS</link>[];
+40 
+49 <link linkend="_structZrocErr">ZrocErr</link>&#32;*<link linkend="_zroc__error_8h_1a2fd7a0b4bad0021bf4e749b184c96968">zroc_err_get</link>(<emphasis role="keywordtype">void</emphasis>);
+50 
+60 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_zroc__error_8h_1ac3b5134d4b68d73b4648c2c8d024bbe8">zroc_err_set</link>(<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f">ZrocErrCode</link>&#32;code,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*msg);
+</programlisting></section>

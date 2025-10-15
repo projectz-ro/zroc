@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_test__log_8c" xml:lang="en-US">
+<title>tests/test_log.c File Reference</title>
+<indexterm><primary>tests/test_log.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;criterion/criterion.h&gt;<?linebreak?>#include &lt;criterion/internal/assert.h&gt;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &lt;time.h&gt;<?linebreak?>#include &lt;zroc/log/zroc_log.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_test__log_8c_1a30fbe6abc32cf7fa726844c3b8c22569">Test</link> (log, default_logger_to_file)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_test__log_8c_1a30fbe6abc32cf7fa726844c3b8c22569"/><section>
+    <title>Test()</title>
+<indexterm><primary>Test</primary><secondary>test_log.c</secondary></indexterm>
+<indexterm><primary>test_log.c</primary><secondary>Test</secondary></indexterm>
+<para><computeroutput>Test (log , default_logger_to_file )</computeroutput></para></section>
+</section>
+</section>

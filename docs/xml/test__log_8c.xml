@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="test__log_8c" kind="file" language="C++">
+    <compoundname>test_log.c</compoundname>
+    <includes local="no">criterion/criterion.h</includes>
+    <includes local="no">criterion/internal/assert.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">time.h</includes>
+    <includes refid="zroc__log_8h" local="no">zroc/log/zroc_log.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>zroc/log/zroc_log.h</label>
+        <link refid="zroc__log_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>tests/test_log.c</label>
+        <link refid="test__log_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>criterion/criterion.h</label>
+      </node>
+      <node id="3">
+        <label>criterion/internal/assert.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="5">
+        <label>time.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="test__log_8c_1ad1704fa27270470655cfff1cbbfbbe99" prot="public" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char last_msg[1024]</definition>
+        <argsstring>[1024]</argsstring>
+        <name>last_msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_log.c" line="7" column="13" bodyfile="tests/test_log.c" bodystart="7" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="test__log_8c_1a30fbe6abc32cf7fa726844c3b8c22569" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test</definition>
+        <argsstring>(log, default_logger_to_file)</argsstring>
+        <name>Test</name>
+        <param>
+          <type>log</type>
+        </param>
+        <param>
+          <type>default_logger_to_file</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/test_log.c" line="9" column="1" bodyfile="tests/test_log.c" bodystart="9" bodyend="32"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;criterion/criterion.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;criterion/internal/assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="zroc__log_8h" kindref="compound">zroc/log/zroc_log.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>last_msg[1024];</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="test__log_8c_1a30fbe6abc32cf7fa726844c3b8c22569" kindref="member">Test</ref>(log,<sp/>default_logger_to_file)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>FILE<sp/>*tmp<sp/>=<sp/>tmpfile();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>time_t<sp/>now<sp/>=<sp/>time(NULL);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[128];</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>expected[128];</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>cr_assert_not_null(tmp,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>temp<sp/>file&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><ref refid="structZrocLogger" kindref="compound">ZrocLogger</ref><sp/>*logger<sp/>=<sp/><ref refid="zroc__log_8h_1aff27c4128e0a65b3baa3793d1c16bfc3" kindref="member">zroc_logger_create</ref>(tmp,<sp/><ref refid="zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba8f14d082f34bfebfb827197e252c8875" kindref="member">ZROC_LOG_DEBUG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="zroc__log_8h_1a7f73d92b4e575eee7379e19227fa2933" kindref="member">zroc_log</ref>(logger,<sp/><ref refid="zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2ba4c3bd9b7a3c33152a14b4f78658175f1" kindref="member">ZROC_LOG_INFO</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Hello<sp/>world&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>*t<sp/>=<sp/>localtime(&amp;now);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>fflush(tmp);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>fseek(tmp,<sp/>0,<sp/>SEEK_SET);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>fgets(buf,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(buf),<sp/>tmp);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>buf[strcspn(buf,<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">)]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>sprintf(expected,<sp/></highlight><highlight class="stringliteral">&quot;[%02d:%02d:%02d]<sp/>[INFO]<sp/>[]<sp/>Hello<sp/>world&quot;</highlight><highlight class="normal">,<sp/>t-&gt;tm_hour,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t-&gt;tm_min,<sp/>t-&gt;tm_sec);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>cr_assert_str_eq(buf,<sp/>expected);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="zroc__log_8h_1a90a43150d5733042eaa9d629bfde7973" kindref="member">zroc_logger_free</ref>(logger);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="tests/test_log.c"/>
+  </compounddef>
+</doxygen>

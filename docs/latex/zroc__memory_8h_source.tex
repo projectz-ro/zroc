@@ -1,0 +1,27 @@
+\doxysection{zroc\+\_\+memory.\+h}
+\hypertarget{zroc__memory_8h_source}{}\label{zroc__memory_8h_source}\index{include/zroc/memory/zroc\_memory.h@{include/zroc/memory/zroc\_memory.h}}
+\mbox{\hyperlink{zroc__memory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{zroc__error_8h}{zroc/error/zroc\_error.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{zroc__log_8h}{zroc/log/zroc\_log.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stddef.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#ifdef\ ZROC\_DEBUG}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ zroc\_malloc(size)\ zroc\_malloc\_zroc\_malloc\_dbg(size,\ \_\_FILE\_\_,\ \_\_LINE\_\_)}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{zroc__memory_8h_a6f64cfc4516e7cb03b81bfe72632bbc1}{zroc\_malloc}}(\textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{zroc__memory_8h_aa6cc6ea184476488bee999902853a98a}{zroc\_malloc\_dbg}}(\textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *file,\ \textcolor{keywordtype}{int}\ line);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{zroc__memory_8h_a6beb2342c311e02fa38e25e8cb961f59}{zroc\_calloc}}(\textcolor{keywordtype}{size\_t}\ count,\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{zroc__memory_8h_a4dfef53c9ac5006af906712f008f2298}{zroc\_realloc}}(\textcolor{keywordtype}{void}\ *ptr,\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{zroc__memory_8h_a60da66b7fc5a35e050af787d37fc97b3}{zroc\_free}}(\textcolor{keywordtype}{void}\ *ptr);}
+
+\end{DoxyCode}

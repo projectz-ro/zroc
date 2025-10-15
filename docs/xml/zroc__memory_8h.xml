@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="zroc__memory_8h" kind="file" language="C++">
+    <compoundname>zroc_memory.h</compoundname>
+    <includes refid="zroc__error_8h" local="yes">zroc/error/zroc_error.h</includes>
+    <includes refid="zroc__log_8h" local="yes">zroc/log/zroc_log.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includedby refid="zroc__error_8c" local="yes">src/error/zroc_error.c</includedby>
+    <includedby refid="zroc__memory_8c" local="yes">src/memory/zroc_memory.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>zroc/error/zroc_error.h</label>
+        <link refid="zroc__error_8h"/>
+      </node>
+      <node id="3">
+        <label>zroc/log/zroc_log.h</label>
+        <link refid="zroc__log_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/zroc/memory/zroc_memory.h</label>
+        <link refid="zroc__memory_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/zroc/memory/zroc_memory.h</label>
+        <link refid="zroc__memory_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/error/zroc_error.c</label>
+        <link refid="zroc__error_8c"/>
+      </node>
+      <node id="3">
+        <label>src/memory/zroc_memory.c</label>
+        <link refid="zroc__memory_8c"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="zroc__memory_8h_1a6f64cfc4516e7cb03b81bfe72632bbc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * zroc_malloc</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>zroc_malloc</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Allocate memory safely. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to allocate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to allocated memory, or NULL on failure.</para>
+</simplesect>
+<simplesect kind="note"><para>Logs an error if allocation fails or if size is invalid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/memory/zroc_memory.h" line="27" column="6" bodyfile="src/memory/zroc_memory.c" bodystart="7" bodyend="18" declfile="include/zroc/memory/zroc_memory.h" declline="27" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="zroc__memory_8h_1aa6cc6ea184476488bee999902853a98a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * zroc_malloc_dbg</definition>
+        <argsstring>(size_t size, const char *file, int line)</argsstring>
+        <name>zroc_malloc_dbg</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+<para>Same as zroc_malloc with line and file logged. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="zroc__memory_8h_1a6f64cfc4516e7cb03b81bfe72632bbc1" kindref="member">zroc_malloc</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/memory/zroc_memory.h" line="33" column="6" declfile="include/zroc/memory/zroc_memory.h" declline="33" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="zroc__memory_8h_1a6beb2342c311e02fa38e25e8cb961f59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * zroc_calloc</definition>
+        <argsstring>(size_t count, size_t size)</argsstring>
+        <name>zroc_calloc</name>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Allocate zero-initialized memory safely. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of elements. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of each element. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to allocated memory, or NULL on failure.</para>
+</simplesect>
+<simplesect kind="note"><para>Logs an error if allocation fails or if total size is invalid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/memory/zroc_memory.h" line="44" column="6" bodyfile="src/memory/zroc_memory.c" bodystart="20" bodyend="32" declfile="include/zroc/memory/zroc_memory.h" declline="44" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="zroc__memory_8h_1a4dfef53c9ac5006af906712f008f2298" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * zroc_realloc</definition>
+        <argsstring>(void *ptr, size_t size)</argsstring>
+        <name>zroc_realloc</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Resize previously allocated memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to previously allocated memory. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New size in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to resized memory, or NULL on failure.</para>
+</simplesect>
+<simplesect kind="note"><para>Original memory is not freed if realloc fails. </para>
+</simplesect>
+<simplesect kind="note"><para>Logs an error if allocation fails or if size is invalid. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/memory/zroc_memory.h" line="56" column="6" bodyfile="src/memory/zroc_memory.c" bodystart="34" bodyend="45" declfile="include/zroc/memory/zroc_memory.h" declline="56" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="zroc__memory_8h_1a60da66b7fc5a35e050af787d37fc97b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void zroc_free</definition>
+        <argsstring>(void *ptr)</argsstring>
+        <name>zroc_free</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Free memory safely. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to memory to free. Can be NULL. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/zroc/memory/zroc_memory.h" line="63" column="6" bodyfile="src/memory/zroc_memory.c" bodystart="47" bodyend="51" declfile="include/zroc/memory/zroc_memory.h" declline="63" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Memory allocation wrappers with error checking. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides safe malloc, calloc, realloc, and free functions that log errors internally on failure. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zroc__error_8h" kindref="compound">zroc/error/zroc_error.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zroc__log_8h" kindref="compound">zroc/log/zroc_log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>ZROC_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>zroc_malloc(size)<sp/>zroc_malloc_zroc_malloc_dbg(size,<sp/>__FILE__,<sp/>__LINE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="zroc__memory_8h_1a6f64cfc4516e7cb03b81bfe72632bbc1" kindref="member">zroc_malloc</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="zroc__memory_8h_1aa6cc6ea184476488bee999902853a98a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="zroc__memory_8h_1aa6cc6ea184476488bee999902853a98a" kindref="member">zroc_malloc_dbg</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*file,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="zroc__memory_8h_1a6beb2342c311e02fa38e25e8cb961f59" kindref="member">zroc_calloc</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="zroc__memory_8h_1a4dfef53c9ac5006af906712f008f2298" kindref="member">zroc_realloc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="zroc__memory_8h_1a60da66b7fc5a35e050af787d37fc97b3" kindref="member">zroc_free</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ptr);</highlight></codeline>
+    </programlisting>
+    <location file="include/zroc/memory/zroc_memory.h"/>
+  </compounddef>
+</doxygen>

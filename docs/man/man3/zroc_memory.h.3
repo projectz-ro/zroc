@@ -1,0 +1,142 @@
+.TH "include/zroc/memory/zroc_memory.h" 3 "Version 0.01" "ZroC" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/zroc/memory/zroc_memory.h \- Memory allocation wrappers with error checking\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include 'zroc/error/zroc_error\&.h'\fP
+.br
+\fR#include 'zroc/log/zroc_log\&.h'\fP
+.br
+\fR#include <stddef\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void * \fBzroc_malloc\fP (size_t size)"
+.br
+.RI "Allocate memory safely\&. "
+.ti -1c
+.RI "void * \fBzroc_malloc_dbg\fP (size_t size, const char *file, int line)"
+.br
+.RI "Same as zroc_malloc with line and file logged\&. "
+.ti -1c
+.RI "void * \fBzroc_calloc\fP (size_t count, size_t size)"
+.br
+.RI "Allocate zero-initialized memory safely\&. "
+.ti -1c
+.RI "void * \fBzroc_realloc\fP (void *ptr, size_t size)"
+.br
+.RI "Resize previously allocated memory\&. "
+.ti -1c
+.RI "void \fBzroc_free\fP (void *ptr)"
+.br
+.RI "Free memory safely\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Memory allocation wrappers with error checking\&. 
+
+Provides safe malloc, calloc, realloc, and free functions that log errors internally on failure\&. 
+.SH "Function Documentation"
+.PP 
+.SS "void * zroc_calloc (size_t count, size_t size)"
+
+.PP
+Allocate zero-initialized memory safely\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcount\fP Number of elements\&. 
+.br
+\fIsize\fP Size of each element\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to allocated memory, or NULL on failure\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Logs an error if allocation fails or if total size is invalid\&. 
+.RE
+.PP
+
+.SS "void zroc_free (void * ptr)"
+
+.PP
+Free memory safely\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIptr\fP Pointer to memory to free\&. Can be NULL\&. 
+.RE
+.PP
+
+.SS "void * zroc_malloc (size_t size)"
+
+.PP
+Allocate memory safely\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsize\fP Number of bytes to allocate\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to allocated memory, or NULL on failure\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Logs an error if allocation fails or if size is invalid\&. 
+.RE
+.PP
+
+.SS "void * zroc_malloc_dbg (size_t size, const char * file, int line)"
+
+.PP
+Same as zroc_malloc with line and file logged\&. 
+.PP
+\fBSee also\fP
+.RS 4
+\fBzroc_malloc\fP 
+.RE
+.PP
+
+.SS "void * zroc_realloc (void * ptr, size_t size)"
+
+.PP
+Resize previously allocated memory\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIptr\fP Pointer to previously allocated memory\&. 
+.br
+\fIsize\fP New size in bytes\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Pointer to resized memory, or NULL on failure\&.
+.RE
+.PP
+\fBNote\fP
+.RS 4
+Original memory is not freed if realloc fails\&. 
+
+.PP
+Logs an error if allocation fails or if size is invalid\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZroC from the source code\&.

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_base__types_8h_source" xml:lang="en-US">
+<title>base_types.h</title>
+<indexterm><primary>include/zroc/base_types.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+2 
+3 <emphasis role="preprocessor">#include&#32;&lt;stdbool.h&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&lt;stddef.h&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;stdint.h&gt;</emphasis>
+6 
+7 <emphasis role="keyword">typedef</emphasis>&#32;uint8_t&#32;<link linkend="_base__types_8h_1a92c50087ca0e64fa93fc59402c55f8ca">u8</link>;
+8 <emphasis role="keyword">typedef</emphasis>&#32;int8_t&#32;<link linkend="_base__types_8h_1ae3702327b5f47e83b431e22b33da7b58">i8</link>;
+9 <emphasis role="keyword">typedef</emphasis>&#32;uint16_t&#32;<link linkend="_base__types_8h_1ace9d960e74685e2cd84b36132dbbf8aa">u16</link>;
+10 <emphasis role="keyword">typedef</emphasis>&#32;int16_t&#32;<link linkend="_base__types_8h_1ad309dbcaeea13aa602d686964156ea0b">i16</link>;
+11 <emphasis role="keyword">typedef</emphasis>&#32;uint32_t&#32;<link linkend="_base__types_8h_1afaa62991928fb9fb18ff0db62a040aba">u32</link>;
+12 <emphasis role="keyword">typedef</emphasis>&#32;int32_t&#32;<link linkend="_base__types_8h_1a48d6cd8e4135fb2ff7e7f2dac84089ec">i32</link>;
+13 <emphasis role="keyword">typedef</emphasis>&#32;uint64_t&#32;<link linkend="_base__types_8h_1a3f7e2bcbb0b4c338f3c4f6c937cd4234">u64</link>;
+14 <emphasis role="keyword">typedef</emphasis>&#32;int64_t&#32;<link linkend="_base__types_8h_1a85cb35fbe5bf2961d7ad5f26814a91a2">i64</link>;
+15 
+16 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_base__types_8h_1a5148c9c1252e19e12def2814f71690e3">usize</link>;
+17 <emphasis role="keyword">typedef</emphasis>&#32;ptrdiff_t&#32;<link linkend="_base__types_8h_1a2992909b9c1ee26479af8fa433d4479f">isize</link>;
+18 
+19 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_base__types_8h_1a5f6906312a689f27d70e9d086649d3fd">f32</link>;
+20 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_base__types_8h_1a94dab5770726ccbef8c7d026cfbdf8e5">f64</link>;
+21 
+22 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_base__types_8h_1af29b166bf5fea7f0bbc07f7014a8c6b5">boolean</link>;
+23 
+24 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*<link linkend="_base__types_8h_1a8fa5a7ddaf7b4d44d3dde63343d8d844">cstr</link>;
+25 <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_base__types_8h_1a92c50087ca0e64fa93fc59402c55f8ca">u8</link>&#32;<link linkend="_base__types_8h_1ab862f2d862051450cf946971b59176da">byte</link>;
+</programlisting></section>

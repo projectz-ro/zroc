@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="zroc_8h" kind="file" language="C++">
+    <compoundname>zroc.h</compoundname>
+    <includes refid="zroc__error_8h" local="yes">error/zroc_error.h</includes>
+    <includes refid="zroc__log_8h" local="yes">log/zroc_log.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>error/zroc_error.h</label>
+        <link refid="zroc__error_8h"/>
+      </node>
+      <node id="3">
+        <label>log/zroc_log.h</label>
+        <link refid="zroc__log_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/zroc/zroc.h</label>
+        <link refid="zroc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zroc__error_8h" kindref="compound">error/zroc_error.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="zroc__log_8h" kindref="compound">log/zroc_log.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/zroc/zroc.h"/>
+  </compounddef>
+</doxygen>

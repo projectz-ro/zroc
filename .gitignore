@@ -1,1 +1,39 @@
-bin/tests/*
+# Build directories
+/build/
+/bin/
+/out/
+/Testing/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# IDE files
+/.idea/
+/.vscode/
+/*.sublime-workspace
+/*.sublime-project
+
+# Compiled objects
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.exe
+
+# Logs, temporary files
+*.log
+*.tmp
+*.swp
+*.DS_Store
+
+# Cache directories
+.cache/
+
+# Ignore system files
+Thumbs.db
+

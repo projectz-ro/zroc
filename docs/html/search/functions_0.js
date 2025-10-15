@@ -1,0 +1,13 @@
+var searchData=
+[
+  ['zroc_5fcalloc_0',['zroc_calloc',['../zroc__memory_8c.html#a6beb2342c311e02fa38e25e8cb961f59',1,'zroc_calloc(size_t count, size_t size):&#160;zroc_memory.c'],['../zroc__memory_8h.html#a6beb2342c311e02fa38e25e8cb961f59',1,'zroc_calloc(size_t count, size_t size):&#160;zroc_memory.c']]],
+  ['zroc_5ferr_5fget_1',['zroc_err_get',['../zroc__error_8c.html#a2fd7a0b4bad0021bf4e749b184c96968',1,'zroc_err_get(void):&#160;zroc_error.c'],['../zroc__error_8h.html#a2fd7a0b4bad0021bf4e749b184c96968',1,'zroc_err_get(void):&#160;zroc_error.c']]],
+  ['zroc_5ferr_5fset_2',['zroc_err_set',['../zroc__error_8c.html#ac3b5134d4b68d73b4648c2c8d024bbe8',1,'zroc_err_set(ZrocErrCode code, const char *msg):&#160;zroc_error.c'],['../zroc__error_8h.html#ac3b5134d4b68d73b4648c2c8d024bbe8',1,'zroc_err_set(ZrocErrCode code, const char *msg):&#160;zroc_error.c']]],
+  ['zroc_5ffree_3',['zroc_free',['../zroc__memory_8c.html#a60da66b7fc5a35e050af787d37fc97b3',1,'zroc_free(void *ptr):&#160;zroc_memory.c'],['../zroc__memory_8h.html#a60da66b7fc5a35e050af787d37fc97b3',1,'zroc_free(void *ptr):&#160;zroc_memory.c']]],
+  ['zroc_5flog_4',['zroc_log',['../zroc__log_8c.html#a7f73d92b4e575eee7379e19227fa2933',1,'zroc_log(ZrocLogger *logger, ZrocLogLevel lvl, const char *fmt,...):&#160;zroc_log.c'],['../zroc__log_8h.html#a7f73d92b4e575eee7379e19227fa2933',1,'zroc_log(ZrocLogger *logger, ZrocLogLevel lvl, const char *fmt,...):&#160;zroc_log.c']]],
+  ['zroc_5flogger_5fcreate_5',['zroc_logger_create',['../zroc__log_8c.html#aff27c4128e0a65b3baa3793d1c16bfc3',1,'zroc_logger_create(FILE *output, int level, const char *prefix):&#160;zroc_log.c'],['../zroc__log_8h.html#aff27c4128e0a65b3baa3793d1c16bfc3',1,'zroc_logger_create(FILE *output, int level, const char *prefix):&#160;zroc_log.c']]],
+  ['zroc_5flogger_5ffree_6',['zroc_logger_free',['../zroc__log_8c.html#a90a43150d5733042eaa9d629bfde7973',1,'zroc_logger_free(ZrocLogger *logger):&#160;zroc_log.c'],['../zroc__log_8h.html#a90a43150d5733042eaa9d629bfde7973',1,'zroc_logger_free(ZrocLogger *logger):&#160;zroc_log.c']]],
+  ['zroc_5fmalloc_7',['zroc_malloc',['../zroc__memory_8c.html#a6f64cfc4516e7cb03b81bfe72632bbc1',1,'zroc_malloc(size_t size):&#160;zroc_memory.c'],['../zroc__memory_8h.html#a6f64cfc4516e7cb03b81bfe72632bbc1',1,'zroc_malloc(size_t size):&#160;zroc_memory.c']]],
+  ['zroc_5fmalloc_5fdbg_8',['zroc_malloc_dbg',['../zroc__memory_8h.html#aa6cc6ea184476488bee999902853a98a',1,'zroc_memory.h']]],
+  ['zroc_5frealloc_9',['zroc_realloc',['../zroc__memory_8c.html#a4dfef53c9ac5006af906712f008f2298',1,'zroc_realloc(void *ptr, size_t size):&#160;zroc_memory.c'],['../zroc__memory_8h.html#a4dfef53c9ac5006af906712f008f2298',1,'zroc_realloc(void *ptr, size_t size):&#160;zroc_memory.c']]]
+];

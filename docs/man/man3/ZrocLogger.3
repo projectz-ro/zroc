@@ -1,0 +1,41 @@
+.TH "ZrocLogger" 3 "Version 0.01" "ZroC" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ZrocLogger \- Represents a logger object\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <zroc_log\&.h>\fP
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "int \fBlevel\fP"
+.br
+.ti -1c
+.RI "FILE * \fBoutput\fP"
+.br
+.ti -1c
+.RI "const char * \fBprefix\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Represents a logger object\&. 
+
+A logger controls where messages are written and which level of messages are actually output\&. 
+.SH "Field Documentation"
+.PP 
+.SS "int level"
+Minimum log level to output\&. 
+.SS "FILE* output"
+Output stream (e\&.g\&., stderr, file)\&. 
+.SS "const char* prefix"
+Optional prefix string for all messages\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZroC from the source code\&.

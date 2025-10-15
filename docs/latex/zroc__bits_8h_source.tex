@@ -1,0 +1,15 @@
+\doxysection{zroc\+\_\+bits.\+h}
+\hypertarget{zroc__bits_8h_source}{}\label{zroc__bits_8h_source}\index{include/zroc/bits/zroc\_bits.h@{include/zroc/bits/zroc\_bits.h}}
+\mbox{\hyperlink{zroc__bits_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{base__types_8h}{zroc/base\_types.h}}"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ bit(\mbox{\hyperlink{base__types_8h_a92c50087ca0e64fa93fc59402c55f8ca}{u8}}\ n)\ \{\ \textcolor{keywordflow}{return}\ ((\mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}})1)\ <<\ n;\ \};}
+\DoxyCodeLine{00006\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ set\_bit(\mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ *v,\ \mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ b)\ \{\ *v\ |=\ b;\ \};}
+\DoxyCodeLine{00007\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ clear\_bit(\mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ *v,\ \mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ b)\ \{\ *v\ \&=\ \string~b;\ \};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ toggle\_bit(\mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ *v,\ \mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ b)\ \{\ *v\ \string^=\ b;\ \};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{boolean}\ check\_bit(\mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ v,\ \mbox{\hyperlink{base__types_8h_a5148c9c1252e19e12def2814f71690e3}{usize}}\ b)\ \{\ \textcolor{keywordflow}{return}\ (v\ \&\ b)\ !=\ 0;\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_zroc__log_8c" xml:lang="en-US">
+<title>src/log/zroc_log.c File Reference</title>
+<indexterm><primary>src/log/zroc_log.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;zroc/log/zroc_log.h&quot;<?linebreak?>#include &lt;stdarg.h&gt;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &lt;time.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structZrocLogger">ZrocLogger</link> * <link linkend="_zroc__log_8c_1aff27c4128e0a65b3baa3793d1c16bfc3">zroc_logger_create</link> (FILE *output, int level, const char *prefix)</para>
+
+<para>Create a new logger. </para>
+</listitem>
+            <listitem><para>void <link linkend="_zroc__log_8c_1a7f73d92b4e575eee7379e19227fa2933">zroc_log</link> (<link linkend="_structZrocLogger">ZrocLogger</link> *logger, <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link> lvl, const char *fmt,...)</para>
+
+<para>Log a formatted message. </para>
+</listitem>
+            <listitem><para>void <link linkend="_zroc__log_8c_1a90a43150d5733042eaa9d629bfde7973">zroc_logger_free</link> (<link linkend="_structZrocLogger">ZrocLogger</link> *logger)</para>
+
+<para>Free a logger. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_zroc__log_8c_1a7f73d92b4e575eee7379e19227fa2933"/><section>
+    <title>zroc_log()</title>
+<indexterm><primary>zroc_log</primary><secondary>zroc_log.c</secondary></indexterm>
+<indexterm><primary>zroc_log.c</primary><secondary>zroc_log</secondary></indexterm>
+<para><computeroutput>void zroc_log (<link linkend="_structZrocLogger">ZrocLogger</link> * logger, <link linkend="_zroc__log_8h_1a7cf7b37b28ff90664625b59bb66c9b2b">ZrocLogLevel</link> lvl, const char * fmt,  ...)</computeroutput></para><para>
+
+<para>Log a formatted message. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>logger</entry><entry>
+<para>Pointer to the logger to use. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>lvl</entry><entry>
+<para>Log level of this message. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>fmt</entry><entry>
+<para>Format string (printf-style). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>...</entry><entry>
+<para>Format arguments.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <note><title>Note</title>
+
+<para>Messages with a level lower than the logger&apos;s <computeroutput>level</computeroutput> will be ignored. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_zroc__log_8c_1aff27c4128e0a65b3baa3793d1c16bfc3"/><section>
+    <title>zroc_logger_create()</title>
+<indexterm><primary>zroc_logger_create</primary><secondary>zroc_log.c</secondary></indexterm>
+<indexterm><primary>zroc_log.c</primary><secondary>zroc_logger_create</secondary></indexterm>
+<para><computeroutput><link linkend="_structZrocLogger">ZrocLogger</link> * zroc_logger_create (FILE * output, int level, const char * prefix)</computeroutput></para><para>
+
+<para>Create a new logger. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>output</entry><entry>
+<para>The output stream (e.g., stderr or a file pointer). </para>
+</entry>
+                            </row>
+                            <row>
+<entry>level</entry><entry>
+<para>Minimum log level to output. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>prefix</entry><entry>
+<para>Optional prefix to prepend to every message (can be NULL). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Pointer to a newly allocated <link linkend="_structZrocLogger">ZrocLogger</link>, or NULL on failure.</para>
+</formalpara>
+<note><title>Note</title>
+
+<para>The returned logger must be freed with <link linkend="_zroc__log_8h_1a90a43150d5733042eaa9d629bfde7973">zroc_logger_free()</link>. </para>
+</note>
+</para>
+</section>
+<anchor xml:id="_zroc__log_8c_1a90a43150d5733042eaa9d629bfde7973"/><section>
+    <title>zroc_logger_free()</title>
+<indexterm><primary>zroc_logger_free</primary><secondary>zroc_log.c</secondary></indexterm>
+<indexterm><primary>zroc_log.c</primary><secondary>zroc_logger_free</secondary></indexterm>
+<para><computeroutput>void zroc_logger_free (<link linkend="_structZrocLogger">ZrocLogger</link> * logger)</computeroutput></para><para>
+
+<para>Free a logger. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>logger</entry><entry>
+<para>Pointer to the logger to free. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

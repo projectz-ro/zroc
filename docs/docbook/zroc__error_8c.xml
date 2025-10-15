@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_zroc__error_8c" xml:lang="en-US">
+<title>src/error/zroc_error.c File Reference</title>
+<indexterm><primary>src/error/zroc_error.c</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;zroc/error/zroc_error.h&quot;<?linebreak?>#include &quot;zroc/memory/zroc_memory.h&quot;<?linebreak?>#include &lt;pthread.h&gt;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &lt;zroc/log/zroc_log.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structZrocErr">ZrocErr</link> * <link linkend="_zroc__error_8c_1a2fd7a0b4bad0021bf4e749b184c96968">zroc_err_get</link> (void)</para>
+
+<para>Get the thread-local error object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_zroc__error_8c_1ac3b5134d4b68d73b4648c2c8d024bbe8">zroc_err_set</link> (<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f">ZrocErrCode</link> code, const char *msg)</para>
+
+<para>Set the thread-local error. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structZrocErr">ZrocErr</link> <link linkend="_zroc__error_8c_1af90f47e36f6fd3588df79039a6dd332e">ZROC_ERRORS</link> []</para>
+
+<para>Array of default errors with messages for each error code. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_zroc__error_8c_1a2fd7a0b4bad0021bf4e749b184c96968"/><section>
+    <title>zroc_err_get()</title>
+<indexterm><primary>zroc_err_get</primary><secondary>zroc_error.c</secondary></indexterm>
+<indexterm><primary>zroc_error.c</primary><secondary>zroc_err_get</secondary></indexterm>
+<para><computeroutput><link linkend="_structZrocErr">ZrocErr</link> * zroc_err_get (void )</computeroutput></para><para>
+
+<para>Get the thread-local error object. </para>
+</para>
+
+<para>If the thread does not have an error object yet, one will be allocated and initialized with code <computeroutput>ZROC_OK</computeroutput> and an empty message.</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Pointer to the thread-local <link linkend="_structZrocErr">ZrocErr</link> object. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_zroc__error_8c_1ac3b5134d4b68d73b4648c2c8d024bbe8"/><section>
+    <title>zroc_err_set()</title>
+<indexterm><primary>zroc_err_set</primary><secondary>zroc_error.c</secondary></indexterm>
+<indexterm><primary>zroc_error.c</primary><secondary>zroc_err_set</secondary></indexterm>
+<para><computeroutput>void zroc_err_set (<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7f">ZrocErrCode</link> code, const char * msg)</computeroutput></para><para>
+
+<para>Set the thread-local error. </para>
+</para>
+
+<para>Updates the thread-local error code and message. If <computeroutput>msg</computeroutput> is <computeroutput>NULL</computeroutput>, the default message for the given <computeroutput>code</computeroutput> from <computeroutput>ZROC_ERRORS</computeroutput> will be used.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>code</entry><entry>
+<para>The error code to set. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>msg</entry><entry>
+<para>Optional error message. If NULL, the default is used. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_zroc__error_8c_1af90f47e36f6fd3588df79039a6dd332e"/><section>
+    <title>ZROC_ERRORS</title>
+<indexterm><primary>ZROC_ERRORS</primary><secondary>zroc_error.c</secondary></indexterm>
+<indexterm><primary>zroc_error.c</primary><secondary>ZROC_ERRORS</secondary></indexterm>
+<para><computeroutput><link linkend="_structZrocErr">ZrocErr</link> ZROC_ERRORS[]</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;{.code&#32;=&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa9a759b6562ff61139b10b6220d06bffe">ZROC_OK</link>,&#32;.message&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>},
+&#32;&#32;&#32;&#32;{.code&#32;=&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faf33a4679cea63d39ff3ee04c0875cc96">ZROC_ERR_INVALID_ARG</link>,&#32;.message&#32;=&#32;<emphasis role="stringliteral">&quot;Invalid&#32;argument&quot;</emphasis>},
+&#32;&#32;&#32;&#32;{.code&#32;=&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa41533111691f1bac49acb4a269493a15">ZROC_ERR_OUT_OF_MEMORY</link>,&#32;.message&#32;=&#32;<emphasis role="stringliteral">&quot;Out&#32;of&#32;memory&quot;</emphasis>},
+&#32;&#32;&#32;&#32;{.code&#32;=&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fac0a4833a9cfc75aa53695c751b0af5f4">ZROC_ERR_ALLOC_FAILED</link>,&#32;.message&#32;=&#32;<emphasis role="stringliteral">&quot;Allocation&#32;failed&quot;</emphasis>},
+&#32;&#32;&#32;&#32;{.code&#32;=&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7fa3a782c262509cc841e56ab01d35d8c9b">ZROC_ERR_CUSTOM</link>,&#32;.message&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>},
+&#32;&#32;&#32;&#32;{.code&#32;=&#32;<link linkend="_zroc__error_8h_1a6340f7a28709f8192fa324ff4f07bc7faca0d574c5785a39437bfeff15d57df13">ZROC_ERR_UNKNOWN</link>,&#32;.message&#32;=&#32;<emphasis role="stringliteral">&quot;Unknown&#32;error&quot;</emphasis>},
+}
+</programlisting><para>
+
+<para>Array of default errors with messages for each error code. </para>
+</para>
+
+<para>Used as the source for default messages when none is provided. </para>
+</section>
+</section>
+</section>

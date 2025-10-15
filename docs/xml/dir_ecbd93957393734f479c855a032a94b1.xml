@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_ecbd93957393734f479c855a032a94b1" kind="dir">
+    <compoundname>include/zroc/log</compoundname>
+    <innerfile refid="zroc__log_8h">zroc_log.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/zroc/log/"/>
+  </compounddef>
+</doxygen>
